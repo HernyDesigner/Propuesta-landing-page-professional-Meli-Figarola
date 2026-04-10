@@ -1,1232 +1,542 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>ELECTRO TECH | Tecnología y Accesorios en Florencio Varela</title>
+    <meta name="description" content="Encontrá la mejor tecnología, auriculares, parlantes y accesorios al mejor precio en Florencio Varela. Envíos rápidos y atención personalizada. ¡Comprá por WhatsApp!">
+    <meta name="keywords" content="electrónica Florencio Varela, accesorios para celulares, auriculares bluetooth, parlantes, cargadores, tecnología zona sur, Electro Tech">
+    <meta name="author" content="Electro Tech">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="ELECTRO TECH | Tienda de Tecnología en Florencio Varela">
+    <meta property="og:description" content="Tecnología de calidad al mejor precio. Auriculares, parlantes y más. ¡Hacé tu pedido por WhatsApp hoy!">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts: Outfit (Moderna, Tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- SEO Primary -->
-  <title>Meli Figarola | Peluquería & Maquillaje en Concordia, Entre Ríos</title>
-  <meta name="description" content="Peluquería profesional, colorimetría, balayage, maquillaje social, novias y quinceañeras en Concordia, Entre Ríos. Reservá tu turno online. Meli Figarola." />
-  <meta name="keywords" content="peluquería Concordia, maquillaje Concordia, balayage Concordia, colorista Entre Ríos, maquillaje novias Concordia, quinceañeras maquillaje Concordia, Meli Figarola peluquería" />
-  <meta name="author" content="Meli Figarola" />
-  <link rel="canonical" href="https://melifigarola.com.ar/" />
-  <meta name="robots" content="index, follow" />
-  <meta name="geo.region" content="AR-E" />
-  <meta name="geo.placename" content="Concordia, Entre Ríos" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://melifigarola.com.ar/" />
-  <meta property="og:title" content="Meli Figarola | Peluquería & Maquillaje en Concordia" />
-  <meta property="og:description" content="Peluquería, colorimetría y maquillaje profesional en Concordia, Entre Ríos. Reservá tu turno hoy." />
-  <meta property="og:locale" content="es_AR" />
-
-  <!-- Schema LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["HairSalon", "BeautySalon"],
-    "name": "Meli Figarola Peluquería",
-    "url": "https://melifigarola.com.ar",
-    "telephone": "+5493454026404",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Concordia",
-      "addressRegion": "Entre Ríos",
-      "addressCountry": "AR"
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
-    ],
-    "sameAs": ["https://www.instagram.com/meli.figarola/"],
-    "priceRange": "$$",
-    "description": "Peluquería profesional especializada en colorimetría, balayage, maquillaje social, novias y quinceañeras en Concordia, Entre Ríos.",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servicios de Belleza",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balayage" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maquillaje de Novia" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Colorimetría" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maquillaje Artístico" } }
-      ]
-    }
-  }
-  </script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['"Cormorant Garamond"', 'serif'],
-            body: ['"Jost"', 'sans-serif'],
-          },
-          colors: {
-            petal:   '#e8a0b0',
-            petald:  '#c97a90',
-            petall:  '#f7e8ed',
-            cream:   '#fdf6f0',
-            creamw:  '#fff8f5',
-            blush:   '#f3d0dc',
-            gold:    '#c9a96e',
-            ink:     '#2a2022',
-            muted:   '#7a5a64',
-          }
+    <!-- Tailwind CSS (Configuración Custom) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        tech: {
+                            dark: '#0B0F19', // Fondo principal
+                            card: '#111827', // Fondo tarjetas
+                            blue: '#3B82F6', // Azul principal
+                            cyan: '#22D3EE', // Cyan neon
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(34, 211, 238, 0.3)',
+                        'neon-hover': '0 0 25px rgba(34, 211, 238, 0.6)',
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- Lenis smooth scroll -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Jost', sans-serif; background: #fdf6f0; color: #2a2022; overflow-x: hidden; }
-
-    /* Custom scrollbar */
-    ::-webkit-scrollbar { width: 3px; }
-    ::-webkit-scrollbar-track { background: #fdf6f0; }
-    ::-webkit-scrollbar-thumb { background: #e8a0b0; border-radius: 3px; }
-
-    /* Organic background shapes */
-    .bg-blob {
-      position: absolute; border-radius: 50%; filter: blur(80px);
-      pointer-events: none; z-index: 0;
-    }
-
-    /* Soft grain overlay */
-    .grain::after {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 9000; opacity: 0.5;
-    }
-
-    /* Nav */
-    #navbar { transition: all 0.5s ease; }
-    #navbar.scrolled {
-      background: rgba(253,246,240,0.92);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 1px 0 rgba(232,160,176,0.2);
-    }
-    .nav-a {
-      font-size: 0.82rem; font-weight: 400; letter-spacing: 0.06em;
-      text-transform: uppercase; color: #2a2022; text-decoration: none;
-      position: relative; transition: color 0.25s;
-    }
-    .nav-a::after {
-      content: ''; position: absolute; bottom: -3px; left: 0;
-      width: 0; height: 1px; background: #e8a0b0;
-      transition: width 0.35s cubic-bezier(0.4,0,0.2,1);
-    }
-    .nav-a:hover { color: #c97a90; }
-    .nav-a:hover::after { width: 100%; }
-
-    /* Hero */
-    .hero-bg {
-      background: linear-gradient(160deg, #fdf6f0 0%, #f7e8ed 45%, #fdf2f8 75%, #fdf6f0 100%);
-    }
-
-    /* Pill label */
-    .pill-label {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(232,160,176,0.15); color: #c97a90;
-      border: 1px solid rgba(232,160,176,0.4);
-      border-radius: 50px; padding: 5px 14px;
-      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-    }
-
-    /* Glass card */
-    .glass {
-      background: rgba(255,255,255,0.65);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(232,160,176,0.2);
-    }
-
-    /* Service card hover */
-    .svc-card {
-      transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1),
-                  box-shadow 0.4s ease, border-color 0.3s;
-    }
-    .svc-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 24px 56px rgba(201,122,144,0.18);
-      border-color: rgba(232,160,176,0.5) !important;
-    }
-
-    /* Portfolio */
-    .port-item { overflow: hidden; position: relative; cursor: pointer; }
-    .port-item img, .port-item .port-ph {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94);
-    }
-    .port-item:hover .port-ph,
-    .port-item:hover img { transform: scale(1.09); }
-    .port-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(42,2,34,0.65) 0%, transparent 55%);
-      opacity: 0; transition: opacity 0.4s ease;
-      display: flex; align-items: flex-end; padding: 1.25rem;
-    }
-    .port-item:hover .port-overlay { opacity: 1; }
-
-    /* Buttons */
-    .btn-p {
-      display: inline-flex; align-items: center; gap: 9px;
-      background: #e8a0b0; color: #fff;
-      padding: 15px 34px; border-radius: 50px;
-      font-family: 'Jost', sans-serif; font-size: 0.85rem;
-      font-weight: 500; letter-spacing: 0.05em;
-      text-decoration: none; border: none; cursor: pointer;
-      box-shadow: 0 4px 20px rgba(232,160,176,0.4);
-      transition: background 0.3s, transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
-    }
-    .btn-p:hover { background: #c97a90; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(201,122,144,0.4); }
-
-    .btn-o {
-      display: inline-flex; align-items: center; gap: 9px;
-      background: transparent; color: #c97a90;
-      padding: 14px 32px; border-radius: 50px;
-      font-family: 'Jost', sans-serif; font-size: 0.85rem;
-      font-weight: 500; letter-spacing: 0.05em;
-      text-decoration: none; border: 1.5px solid #e8a0b0; cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .btn-o:hover { background: #f7e8ed; transform: translateY(-2px); }
-
-    /* Form inputs */
-    .finput {
-      width: 100%; padding: 14px 18px;
-      border: 1.5px solid rgba(232,160,176,0.3);
-      border-radius: 12px; outline: none;
-      background: rgba(255,255,255,0.75);
-      font-family: 'Jost', sans-serif; font-size: 0.88rem; color: #2a2022;
-      transition: border-color 0.3s, box-shadow 0.3s;
-      backdrop-filter: blur(6px);
-    }
-    .finput:focus { border-color: #e8a0b0; box-shadow: 0 0 0 3px rgba(232,160,176,0.12); }
-    .finput::placeholder { color: #c0a0aa; }
-    .flabel {
-      display: block; font-size: 0.72rem; font-weight: 500;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: #c97a90; margin-bottom: 7px;
-    }
-
-    /* WhatsApp float */
-    .wa {
-      position: fixed; bottom: 28px; right: 28px; z-index: 9999;
-      width: 58px; height: 58px; border-radius: 50%;
-      background: #25D366;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
-      text-decoration: none;
-      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
-    }
-    .wa:hover { transform: scale(1.13); box-shadow: 0 12px 36px rgba(37,211,102,0.5); }
-    .wa svg { width: 28px; height: 28px; fill: white; }
-    .wa-ring {
-      position: absolute; inset: -5px; border-radius: 50%;
-      background: rgba(37,211,102,0.25);
-      animation: ring 2.2s ease-out infinite;
-    }
-    @keyframes ring { 0%{ transform:scale(1);opacity:.7 } 100%{ transform:scale(1.7);opacity:0 } }
-
-    /* Testi card */
-    .tcard { transition: transform 0.3s ease; }
-    .tcard:hover { transform: translateY(-5px); }
-
-    /* Stat */
-    .stat-n {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem; font-weight: 600; color: #c97a90; line-height: 1;
-    }
-
-    /* Section titles */
-    .stitle {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.1rem, 4.5vw, 3.2rem);
-      font-weight: 600; line-height: 1.1; color: #2a2022;
-    }
-
-    /* Reveal — estado inicial manejado por GSAP, no CSS */
-    .rv, .rvl, .rvr { will-change: transform, opacity; }
-
-    /* Mobile nav */
-    #mob-nav { transition: max-height 0.45s ease, opacity 0.35s ease; max-height: 0; opacity: 0; overflow: hidden; }
-
-    /* Highlight text */
-    .hi { color: #c97a90; font-style: italic; }
-
-    /* Divider wave */
-    .wdiv { line-height: 0; }
-    .wdiv svg { display: block; }
-
-    /* FAQ accordion */
-    .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .faq-body.open { max-height: 300px; }
-    .faq-icon { transition: transform 0.3s ease; }
-    .faq-icon.open { transform: rotate(45deg); }
-  </style>
-</head>
-<body class="grain">
-
-<!-- ===== NAV ===== -->
-<header id="navbar" class="fixed top-0 inset-x-0 z-50 py-4 px-6 lg:px-14">
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
-
-    <a href="#inicio" aria-label="Inicio Meli Figarola" class="flex items-center gap-3 group">
-      <!-- Logo icon — reemplazar img src con logo real -->
-      <div class="w-10 h-10 rounded-full border border-petal/40 bg-white/70 flex items-center justify-center overflow-hidden">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="10" cy="18" r="5.5" stroke="#2a2022" stroke-width="1.2" fill="none"/>
-          <line x1="10" y1="5" x2="10" y2="12.5" stroke="#2a2022" stroke-width="1.2" stroke-linecap="round"/>
-          <line x1="18" y1="24" x2="22" y2="27" stroke="#2a2022" stroke-width="1.2" stroke-linecap="round"/>
-          <circle cx="15" cy="14" r="3" fill="#f3d0dc" opacity="0.8"/>
-        </svg>
-      </div>
-      <div>
-        <p class="font-display text-[17px] font-semibold leading-none text-ink">Meli Figarola</p>
-        <p class="text-[10px] tracking-[0.15em] text-petald font-body uppercase leading-none mt-0.5">Peluquería</p>
-      </div>
-    </a>
-
-    <!-- Desktop -->
-    <nav class="hidden md:flex items-center gap-7" aria-label="Menú principal">
-      <a href="#servicios" class="nav-a">Servicios</a>
-      <a href="#portfolio" class="nav-a">Portfolio</a>
-      <a href="#sobre-mi" class="nav-a">Sobre mí</a>
-      <a href="#testimonios" class="nav-a">Testimonios</a>
-      <a href="#faq" class="nav-a">FAQ</a>
-      <a href="#contacto" class="btn-p py-2.5 px-6 text-xs">Reservar turno</a>
-    </nav>
-
-    <!-- Hamburger -->
-    <button id="ham" class="md:hidden p-2 flex flex-col gap-[5px]" aria-label="Abrir menú" aria-expanded="false">
-      <span class="w-6 h-[1.5px] bg-ink rounded transition-all duration-300" id="h1"></span>
-      <span class="w-6 h-[1.5px] bg-ink rounded transition-all duration-300" id="h2"></span>
-      <span class="w-4 h-[1.5px] bg-ink rounded transition-all duration-300" id="h3"></span>
-    </button>
-  </div>
-
-  <!-- Mobile nav -->
-  <div id="mob-nav">
-    <nav class="mt-3 px-5 py-6 glass rounded-2xl flex flex-col gap-4" aria-label="Menú móvil">
-      <a href="#servicios" class="nav-a py-2 border-b border-petal/10">Servicios</a>
-      <a href="#portfolio" class="nav-a py-2 border-b border-petal/10">Portfolio</a>
-      <a href="#sobre-mi" class="nav-a py-2 border-b border-petal/10">Sobre mí</a>
-      <a href="#testimonios" class="nav-a py-2 border-b border-petal/10">Testimonios</a>
-      <a href="#faq" class="nav-a py-2 border-b border-petal/10">FAQ</a>
-      <a href="#contacto" class="btn-p justify-center mt-1">Reservar turno</a>
-    </nav>
-  </div>
-</header>
-
-
-<!-- ===== HERO ===== -->
-<section id="inicio" class="hero-bg relative min-h-screen flex items-center pt-28 pb-20 px-6 lg:px-14 overflow-hidden" aria-label="Inicio">
-
-  <!-- Blobs -->
-  <div class="bg-blob w-[500px] h-[500px] bg-petal/15 top-[-100px] right-[-150px]" aria-hidden="true"></div>
-  <div class="bg-blob w-[350px] h-[350px] bg-gold/10 bottom-0 left-[-80px]" aria-hidden="true"></div>
-
-  <!-- Decorative petals SVG -->
-  <svg class="absolute top-20 right-10 w-64 h-64 opacity-[0.08] hidden lg:block" viewBox="0 0 200 200" fill="#e8a0b0" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="100" cy="55" rx="22" ry="48" transform="rotate(0 100 100)"/>
-    <ellipse cx="100" cy="55" rx="22" ry="48" transform="rotate(60 100 100)"/>
-    <ellipse cx="100" cy="55" rx="22" ry="48" transform="rotate(120 100 100)"/>
-    <circle cx="100" cy="100" r="22" fill="#f3d0dc"/>
-  </svg>
-  <svg class="absolute bottom-16 left-12 w-32 h-32 opacity-[0.07] hidden lg:block" viewBox="0 0 200 200" fill="#c9a96e" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <ellipse cx="100" cy="55" rx="20" ry="44" transform="rotate(0 100 100)"/>
-    <ellipse cx="100" cy="55" rx="20" ry="44" transform="rotate(60 100 100)"/>
-    <ellipse cx="100" cy="55" rx="20" ry="44" transform="rotate(120 100 100)"/>
-    <circle cx="100" cy="100" r="18" fill="#fae0b0"/>
-  </svg>
-
-  <div class="relative z-10 max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center w-full">
-
-    <!-- Copy -->
-    <div>
-      <span class="pill-label h-pill mb-6 inline-flex" id="hero-pill">✦ Concordia, Entre Ríos</span>
-
-      <h1 class="font-display font-semibold text-ink h-title mb-6" style="font-size: clamp(2.8rem,7vw,4.8rem); line-height:1.05;">
-        Tu belleza,<br>
-        <span class="hi">tu historia,</span><br>
-        tu momento.
-      </h1>
-
-      <p class="font-body text-muted text-lg leading-relaxed h-sub mb-10 max-w-[440px]" style="font-weight:300;">
-        Peluquería profesional, colorimetría y maquillaje artístico en Concordia.
-        Atención personalizada con empatía, amor y más de 10 años de experiencia.
-      </p>
-
-      <div class="flex flex-wrap gap-4 h-btns mb-14">
-        <a href="#contacto" class="btn-p">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Reservar turno
-        </a>
-        <a href="#portfolio" class="btn-o">Ver mis trabajos</a>
-      </div>
-
-      <!-- Stats row -->
-      <div class="flex items-center gap-8 h-stats">
-        <div class="text-center">
-          <div class="stat-n" data-target="10" data-suffix="+">0</div>
-          <p class="text-xs text-muted tracking-wide mt-1 font-body">años de experiencia</p>
-        </div>
-        <div class="w-px h-12 bg-petal/30"></div>
-        <div class="text-center">
-          <div class="stat-n" data-target="863" data-suffix="">0</div>
-          <p class="text-xs text-muted tracking-wide mt-1 font-body">trabajos publicados</p>
-        </div>
-        <div class="w-px h-12 bg-petal/30"></div>
-        <div class="text-center">
-          <div class="stat-n" data-target="100" data-suffix="%">0</div>
-          <p class="text-xs text-muted tracking-wide mt-1 font-body">pasión y corazón</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Hero images mosaic — reemplazar divs de color con <img> reales -->
-    <div class="relative hidden lg:block h-mosaic">
-      <div class="grid grid-cols-2 gap-3 h-[520px]">
-
-        <div class="port-item rounded-[24px] row-span-2 h-full"
-             style="background: linear-gradient(145deg,#f3d0dc,#e8a0b0,#c97a90);">
-          <div class="port-ph flex items-center justify-center h-full text-white/80">
-            <div class="text-center px-4">
-              <div class="text-5xl mb-3">💇‍♀️</div>
-              <p class="text-sm font-body tracking-wider opacity-70">Foto principal<br>aquí</p>
-            </div>
-          </div>
-          <div class="port-overlay"><span class="text-white text-sm font-body">Balayage natural</span></div>
-        </div>
-
-        <div class="flex flex-col gap-3 h-full">
-          <div class="port-item rounded-[20px] flex-1"
-               style="background: linear-gradient(145deg,#fdf2e0,#e8d0a0);">
-            <div class="port-ph flex items-center justify-center h-full">
-              <span class="text-3xl">💄</span>
-            </div>
-            <div class="port-overlay"><span class="text-white text-xs font-body">Maquillaje social</span></div>
-          </div>
-          <div class="port-item rounded-[20px] flex-1"
-               style="background: linear-gradient(145deg,#2a2022,#4a2a36);">
-            <div class="port-ph flex items-center justify-center h-full">
-              <span class="text-3xl">🎭</span>
-            </div>
-            <div class="port-overlay"><span class="text-white text-xs font-body">Arte & carnaval</span></div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Floating badge -->
-      <div class="glass absolute -bottom-5 -left-8 rounded-2xl px-5 py-4 flex items-center gap-3 border border-petal/20 shadow-lg">
-        <div class="w-10 h-10 rounded-full bg-petal/20 flex items-center justify-center text-lg flex-shrink-0">🌸</div>
-        <div>
-          <p class="text-[11px] text-muted font-body">Atención</p>
-          <p class="text-sm font-semibold text-ink font-body">100% personalizada</p>
-        </div>
-      </div>
-
-      <!-- Deco circle -->
-      <div class="absolute -top-8 -right-8 w-28 h-28 rounded-full border border-petal/20" aria-hidden="true"></div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- WAVE -->
-<div class="wdiv -mt-1" aria-hidden="true">
-  <svg viewBox="0 0 1440 55" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0C360 55 720 0 1080 30 1260 45 1380 20 1440 30V55H0Z" fill="#fff8f5"/>
-  </svg>
-</div>
-
-
-<!-- ===== SERVICIOS ===== -->
-<section id="servicios" class="py-24 px-6 lg:px-14 bg-creamw" aria-label="Servicios">
-  <div class="max-w-6xl mx-auto">
-
-    <div class="text-center mb-16 rv">
-      <span class="pill-label mb-4 inline-flex">Lo que hago</span>
-      <h2 class="stitle">Servicios con alma<br><span class="hi">y resultado</span></h2>
-      <p class="text-muted mt-4 max-w-md mx-auto font-body" style="font-weight:300;">
-        Cada servicio está pensado para que te vayas sintiéndote increíble,
-        cómoda y siendo 100% vos.
-      </p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-
-      <article class="svc-card glass rounded-[20px] p-7 border border-petal/15 rv"
-               itemscope itemtype="https://schema.org/Service">
-        <div class="w-12 h-12 rounded-2xl bg-petal/15 flex items-center justify-center text-2xl mb-5">✂️</div>
-        <h3 class="font-display text-xl font-semibold text-ink mb-2" itemprop="name">Corte & Peinado</h3>
-        <p class="text-muted text-sm leading-relaxed font-body" itemprop="description" style="font-weight:300;">
-          Cortes que acompañan tu rostro, estilo de vida y personalidad.
-          Peinados para el día a día o para celebrar lo que sea.
-        </p>
-        <div class="mt-5 text-petald text-xs font-body tracking-wider">✦ Concordia, Entre Ríos</div>
-      </article>
-
-      <article class="svc-card glass rounded-[20px] p-7 border border-gold/20 rv"
-               itemscope itemtype="https://schema.org/Service">
-        <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center text-2xl mb-5">🎨</div>
-        <h3 class="font-display text-xl font-semibold text-ink mb-2" itemprop="name">Colorimetría & Balayage</h3>
-        <p class="text-muted text-sm leading-relaxed font-body" itemprop="description" style="font-weight:300;">
-          Especialista en coloración natural. Balayage, mechas y decoloración
-          que realzan tu belleza única con técnica y cuidado.
-        </p>
-        <div class="mt-5 text-gold text-xs font-body tracking-wider">✦ Resultado natural y luminoso</div>
-      </article>
-
-      <article class="svc-card glass rounded-[20px] p-7 border border-petal/15 rv"
-               itemscope itemtype="https://schema.org/Service">
-        <div class="w-12 h-12 rounded-2xl bg-blush/50 flex items-center justify-center text-2xl mb-5">💄</div>
-        <h3 class="font-display text-xl font-semibold text-ink mb-2" itemprop="name">Maquillaje Social</h3>
-        <p class="text-muted text-sm leading-relaxed font-body" itemprop="description" style="font-weight:300;">
-          Maquillaje para eventos, salidas y toda ocasión especial.
-          Técnicas actuales adaptadas a cada piel y personalidad.
-        </p>
-        <div class="mt-5 text-petald text-xs font-body tracking-wider">✦ Looks personalizados</div>
-      </article>
-
-      <article class="svc-card glass rounded-[20px] p-7 border border-petal/15 rv"
-               itemscope itemtype="https://schema.org/Service">
-        <div class="w-12 h-12 rounded-2xl bg-petal/15 flex items-center justify-center text-2xl mb-5">💍</div>
-        <h3 class="font-display text-xl font-semibold text-ink mb-2" itemprop="name">Maquillaje de Novia</h3>
-        <p class="text-muted text-sm leading-relaxed font-body" itemprop="description" style="font-weight:300;">
-          Tu día más especial merece un look impecable y duradero.
-          Incluye prueba previa y acompañamiento personalizado.
-        </p>
-        <div class="mt-5 text-petald text-xs font-body tracking-wider">✦ Con prueba previa incluida</div>
-      </article>
-
-      <article class="svc-card glass rounded-[20px] p-7 border border-blush/50 rv"
-               itemscope itemtype="https://schema.org/Service">
-        <div class="w-12 h-12 rounded-2xl bg-blush/50 flex items-center justify-center text-2xl mb-5">🎀</div>
-        <h3 class="font-display text-xl font-semibold text-ink mb-2" itemprop="name">Quinceañeras</h3>
-        <p class="text-muted text-sm leading-relaxed font-body" itemprop="description" style="font-weight:300;">
-          Un momento único que se vive una sola vez. Look soñado
-          para la quinceañera y su comitiva. ¡Coordinamos todo!
-        </p>
-        <div class="mt-5 text-petald text-xs font-body tracking-wider">✦ Quince + Comitiva</div>
-      </article>
-
-      <article class="svc-card glass rounded-[20px] p-7 border border-gold/20 rv"
-               itemscope itemtype="https://schema.org/Service">
-        <div class="w-12 h-12 rounded-2xl bg-gold/15 flex items-center justify-center text-2xl mb-5">🎭</div>
-        <h3 class="font-display text-xl font-semibold text-ink mb-2" itemprop="name">Maquillaje Artístico</h3>
-        <p class="text-muted text-sm leading-relaxed font-body" itemprop="description" style="font-weight:300;">
-          Carnaval, teatro, fantasía y eventos especiales. Looks únicos
-          que van más allá de lo convencional con técnica profesional.
-        </p>
-        <div class="mt-5 text-gold text-xs font-body tracking-wider">✦ Carnaval & eventos</div>
-      </article>
-
-    </div>
-
-    <div class="text-center mt-12 rv">
-      <a href="#contacto" class="btn-p">Consultar disponibilidad →</a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- WAVE -->
-<div class="wdiv" aria-hidden="true">
-  <svg viewBox="0 0 1440 55" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 40C480 0 960 55 1440 20V55H0Z" fill="#fdf6f0"/>
-  </svg>
-</div>
-
-
-<!-- ===== PORTFOLIO ===== -->
-<section id="portfolio" class="py-24 px-6 lg:px-14 bg-cream" aria-label="Portfolio de trabajos">
-  <div class="max-w-6xl mx-auto">
-
-    <div class="text-center mb-16 rv">
-      <span class="pill-label mb-4 inline-flex">Mis trabajos</span>
-      <h2 class="stitle">Cada look,<br><span class="hi">una historia</span></h2>
-      <p class="text-muted mt-4 max-w-sm mx-auto font-body" style="font-weight:300;">
-        Cada trabajo es único como la persona que lo lleva.
-      </p>
-    </div>
-
-    <!-- Grid — reemplazar divs de color con <img src="" alt="" loading="lazy"> -->
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[200px]">
-
-      <div class="port-item rounded-[18px] col-span-2 row-span-2">
-        <div class="port-ph w-full h-full flex items-center justify-center"
-             style="background:linear-gradient(145deg,#f3d0dc,#e8a0b0,#c97a90);">
-          <div class="text-center text-white">
-            <div class="text-4xl mb-2">💇‍♀️</div>
-            <p class="text-xs tracking-wider opacity-70">Foto balayage aquí</p>
-          </div>
-        </div>
-        <div class="port-overlay"><span class="text-white text-sm">Balayage natural</span></div>
-      </div>
-
-      <div class="port-item rounded-[18px]">
-        <div class="port-ph w-full h-full flex items-center justify-center"
-             style="background:linear-gradient(145deg,#f7e0c8,#e8c090);">
-          <span class="text-3xl">✂️</span>
-        </div>
-        <div class="port-overlay"><span class="text-white text-xs">Corte & estilo</span></div>
-      </div>
-
-      <div class="port-item rounded-[18px]">
-        <div class="port-ph w-full h-full flex items-center justify-center"
-             style="background:linear-gradient(145deg,#f9c8d5,#f3a0b8);">
-          <span class="text-3xl">💄</span>
-        </div>
-        <div class="port-overlay"><span class="text-white text-xs">Maquillaje social</span></div>
-      </div>
-
-      <div class="port-item rounded-[18px]">
-        <div class="port-ph w-full h-full flex items-center justify-center"
-             style="background:linear-gradient(145deg,#f3d0dc,#c97a90);">
-          <span class="text-3xl">💍</span>
-        </div>
-        <div class="port-overlay"><span class="text-white text-xs">Novia</span></div>
-      </div>
-
-      <div class="port-item rounded-[18px]">
-        <div class="port-ph w-full h-full flex items-center justify-center"
-             style="background:linear-gradient(145deg,#fae8d0,#c9a96e);">
-          <span class="text-3xl">🎀</span>
-        </div>
-        <div class="port-overlay"><span class="text-white text-xs">Quinceañera</span></div>
-      </div>
-
-      <div class="port-item rounded-[18px] col-span-2">
-        <div class="port-ph w-full h-full flex items-center justify-center"
-             style="background:linear-gradient(145deg,#2a2022,#4a2038);">
-          <div class="text-center text-white">
-            <div class="text-4xl mb-2">🎭</div>
-            <p class="text-xs tracking-wider opacity-60">Arte & carnaval</p>
-          </div>
-        </div>
-        <div class="port-overlay"><span class="text-white text-sm">Maquillaje artístico</span></div>
-      </div>
-
-    </div>
-
-    <div class="text-center mt-10 rv">
-      <a href="https://www.instagram.com/meli.figarola/" target="_blank" rel="noopener noreferrer" class="btn-o">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        Ver más en Instagram
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- WAVE -->
-<div class="wdiv" aria-hidden="true">
-  <svg viewBox="0 0 1440 55" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 20C480 60 960 0 1440 40V55H0Z" fill="#fff8f5"/>
-  </svg>
-</div>
-
-
-<!-- ===== SOBRE MÍ ===== -->
-<section id="sobre-mi" class="py-24 px-6 lg:px-14 bg-creamw" aria-label="Sobre Meli Figarola">
-  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-
-    <!-- Image block -->
-    <div class="relative rvl">
-      <div class="rounded-[32px] overflow-hidden h-[500px]"
-           style="background:linear-gradient(150deg,#f7e8ed,#f3d0dc,#f9ede4);">
-        <!-- Reemplazar con: <img src="foto-meli.jpg" alt="Meli Figarola maquilladora y peluquera en Concordia, Entre Ríos" class="w-full h-full object-cover"> -->
-        <div class="w-full h-full flex items-center justify-center">
-          <div class="text-center px-8">
-            <div class="text-6xl mb-5">🌸</div>
-            <p class="font-display text-2xl italic text-petald">Foto de Meli aquí</p>
-            <p class="text-xs text-petal/60 mt-2 tracking-wider">Reemplazar con imagen real</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Floating review -->
-      <div class="glass absolute -right-6 bottom-10 rounded-2xl px-5 py-4 max-w-[210px] border border-petal/15 shadow-xl">
-        <div class="text-yellow-400 text-xs mb-2">★★★★★</div>
-        <p class="text-xs text-muted italic leading-relaxed font-body">
-          "Lo mejor que me pasó para mi casamiento."
-        </p>
-        <p class="text-xs font-semibold text-petald mt-2 font-body">— Clienta feliz 💕</p>
-      </div>
-
-      <!-- Deco -->
-      <div class="absolute -top-8 -left-8 w-24 h-24 rounded-full border border-petal/20" aria-hidden="true"></div>
-      <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-petal/15" aria-hidden="true"></div>
-    </div>
-
-    <!-- Copy -->
-    <div class="rvr">
-      <span class="pill-label mb-5 inline-flex">Sobre mí</span>
-      <h2 class="stitle mb-6">
-        Hola, soy Meli.<br>
-        <span class="hi">Madre emprendedora</span><br>
-        y artista del detalle.
-      </h2>
-      <p class="text-muted leading-relaxed mb-5 font-body" style="font-weight:300;">
-        Soy peluquera profesional y maquilladora artística con más de 10 años
-        de experiencia en Concordia, Entre Ríos. Me especializo en colorimetría,
-        balayage, maquillaje social, novias, quinceañeras y maquillaje de carnaval.
-      </p>
-      <p class="text-muted leading-relaxed mb-8 font-body" style="font-weight:300;">
-        Creo que cada persona tiene su propia belleza y mi trabajo es ayudarte
-        a encontrarla. Trabajo con amor, dedicación y sobre todo con empatía.
-        Cuando llegás a mi silla, primero charlamos, porque entender quién sos
-        es la base de todo lo que hago.
-      </p>
-
-      <div class="flex flex-wrap gap-2 mb-8">
-        <span class="bg-petal/12 text-petald text-xs px-4 py-2 rounded-full border border-petal/25">Colorimetría</span>
-        <span class="bg-petal/12 text-petald text-xs px-4 py-2 rounded-full border border-petal/25">Balayage</span>
-        <span class="bg-gold/12 text-[#8a6030] text-xs px-4 py-2 rounded-full border border-gold/30">Maquillaje artístico</span>
-        <span class="bg-petal/12 text-petald text-xs px-4 py-2 rounded-full border border-petal/25">Novias & quinces</span>
-        <span class="bg-blush/40 text-muted text-xs px-4 py-2 rounded-full border border-petal/20">Madre emprendedora</span>
-      </div>
-
-      <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Vi%20tu%20web%20y%20me%20gustar%C3%ADa%20consultar%20%F0%9F%8C%B8"
-         target="_blank" rel="noopener noreferrer" class="btn-p">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.217.603 4.288 1.654 6.065L.057 24l6.101-1.594A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.011-1.373l-.36-.213-3.722.973.997-3.638-.234-.374A9.775 9.775 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-        Escribime por WhatsApp
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ===== TESTIMONIOS ===== -->
-<section id="testimonios" class="py-24 px-6 lg:px-14" style="background:linear-gradient(160deg,#fdf2f8,#fdf6f0);" aria-label="Testimonios">
-  <div class="max-w-6xl mx-auto">
-
-    <div class="text-center mb-16 rv">
-      <span class="pill-label mb-4 inline-flex">Lo que dicen</span>
-      <h2 class="stitle">Palabras que<br><span class="hi">nos llenan el corazón</span></h2>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-5">
-
-      <div class="tcard glass rounded-[20px] p-7 border border-petal/15 rv" itemscope itemtype="https://schema.org/Review">
-        <div class="text-yellow-400 text-sm mb-4">★★★★★</div>
-        <p class="text-muted text-sm italic leading-relaxed mb-6 font-body" itemprop="reviewBody" style="font-weight:300;">
-          "Meli es una artista. Me hizo el maquillaje de casamiento y quedé
-          llorando de lo bella que me sentía. Una profesional increíble y
-          con una energía que te abraza."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-petal/20 flex items-center justify-center text-petald font-semibold text-sm font-body">M</div>
-          <div>
-            <p class="text-sm font-semibold text-ink font-body" itemprop="author">María L.</p>
-            <p class="text-xs text-muted font-body">Novia 2024</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tcard glass rounded-[20px] p-7 border border-gold/20 rv" itemscope itemtype="https://schema.org/Review">
-        <div class="text-yellow-400 text-sm mb-4">★★★★★</div>
-        <p class="text-muted text-sm italic leading-relaxed mb-6 font-body" itemprop="reviewBody" style="font-weight:300;">
-          "Me hice el balayage y la gente me para por la calle a preguntarme
-          dónde me lo hice. Resultado natural, luminoso y con bajo
-          mantenimiento. ¡La mejor colorista de Concordia!"
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-[#8a6030] font-semibold text-sm font-body">S</div>
-          <div>
-            <p class="text-sm font-semibold text-ink font-body" itemprop="author">Sofía R.</p>
-            <p class="text-xs text-muted font-body">Clienta fiel</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tcard glass rounded-[20px] p-7 border border-petal/15 rv" itemscope itemtype="https://schema.org/Review">
-        <div class="text-yellow-400 text-sm mb-4">★★★★★</div>
-        <p class="text-muted text-sm italic leading-relaxed mb-6 font-body" itemprop="reviewBody" style="font-weight:300;">
-          "Para los 15 de mi hija, Meli coordinó maquillaje y peinado
-          de toda la comitiva. Perfecta, puntual y con una paciencia y
-          amor que nos hizo sentir princesas."
-        </p>
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-blush/60 flex items-center justify-center text-petald font-semibold text-sm font-body">A</div>
-          <div>
-            <p class="text-sm font-semibold text-ink font-body" itemprop="author">Andrea P.</p>
-            <p class="text-xs text-muted font-body">Mamá de quinceañera</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ===== FAQ — SEO IA ===== -->
-<section id="faq" class="py-24 px-6 lg:px-14 bg-cream" aria-label="Preguntas frecuentes">
-  <div class="max-w-3xl mx-auto">
-
-    <div class="text-center mb-14 rv">
-      <span class="pill-label mb-4 inline-flex">FAQ</span>
-      <h2 class="stitle">Preguntas<br><span class="hi">frecuentes</span></h2>
-    </div>
-
-    <!-- Schema FAQ -->
+    </script>
+
+    <!-- CSS Personalizado para utilidades extra -->
+    <style>
+        body { background-color: #0B0F19; color: #ffffff; }
+        .text-gradient {
+            background: linear-gradient(to right, #3B82F6, #22D3EE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-tech {
+            background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(34,211,238,0.05) 100%);
+        }
+        /* Ocultar scrollbar pero permitir scroll */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #3B82F6; border-radius: 4px; }
+        
+        /* Animación pulso WhatsApp */
+        @keyframes pulse-wpp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .btn-whatsapp-float { animation: pulse-wpp 2s infinite; }
+    </style>
+
+    <!-- SEO Técnico: Schema Markup para IA y Google Local -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "¿Dónde queda la peluquería de Meli Figarola?", "acceptedAnswer": { "@type": "Answer", "text": "Meli Figarola está ubicada en Concordia, Entre Ríos, Argentina. La dirección exacta se coordina al confirmar el turno por WhatsApp." } },
-        { "@type": "Question", "name": "¿Cómo reservo un turno con Meli Figarola?", "acceptedAnswer": { "@type": "Answer", "text": "Podés reservar tu turno completando el formulario en esta página o escribiendo directamente por WhatsApp al +54 9 3454 02-6404." } },
-        { "@type": "Question", "name": "¿Hace maquillaje de novias y quinceañeras?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Meli Figarola se especializa en maquillaje de novias (con prueba previa incluida) y quinceañeras, coordinando también el maquillaje y peinado de la comitiva." } },
-        { "@type": "Question", "name": "¿Qué es el balayage y lo hacen en Concordia?", "acceptedAnswer": { "@type": "Answer", "text": "El balayage es una técnica de coloración que aclara el cabello de forma natural, como si el sol lo hubiera iluminado. Meli Figarola es especialista en balayage en Concordia, Entre Ríos." } }
-      ]
+      "@type": "ElectronicsStore",
+      "name": "ELECTRO TECH",
+      "image": "URL_DE_TU_LOGO_O_IMAGEN",
+      "description": "Tienda de electrónica y accesorios tecnológicos en Florencio Varela. Venta de auriculares, parlantes, cargadores y más.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centro",
+        "addressLocality": "Florencio Varela",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "telephone": "+5491100000000",
+      "priceRange": "$$"
     }
     </script>
+</head>
+<body class="antialiased selection:bg-tech-cyan selection:text-tech-dark">
 
-    <div class="space-y-3 rv">
-
-      <div class="glass rounded-2xl border border-petal/15 overflow-hidden">
-        <button class="faq-btn w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
-          <span class="font-display text-lg font-semibold text-ink">¿Dónde queda la peluquería de Meli Figarola?</span>
-          <span class="faq-icon text-petal text-2xl flex-shrink-0 ml-4 leading-none">+</span>
-        </button>
-        <div class="faq-body px-6 pb-0">
-          <p class="text-muted text-sm leading-relaxed pb-6 font-body" style="font-weight:300;">
-            Estamos en Concordia, Entre Ríos, Argentina. La dirección exacta se
-            coordina al confirmar el turno por WhatsApp para mayor comodidad y
-            privacidad de nuestras clientas.
-          </p>
-        </div>
-      </div>
-
-      <div class="glass rounded-2xl border border-petal/15 overflow-hidden">
-        <button class="faq-btn w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
-          <span class="font-display text-lg font-semibold text-ink">¿Cómo reservo un turno?</span>
-          <span class="faq-icon text-petal text-2xl flex-shrink-0 ml-4 leading-none">+</span>
-        </button>
-        <div class="faq-body px-6 pb-0">
-          <p class="text-muted text-sm leading-relaxed pb-6 font-body" style="font-weight:300;">
-            Podés reservar completando el formulario de esta página o escribiendo
-            directamente por WhatsApp al <strong class="text-ink">+54 9 3454 02-6404</strong>.
-            Te respondemos a la brevedad para coordinar día y horario.
-          </p>
-        </div>
-      </div>
-
-      <div class="glass rounded-2xl border border-petal/15 overflow-hidden">
-        <button class="faq-btn w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
-          <span class="font-display text-lg font-semibold text-ink">¿Hacés maquillaje de novias y quinceañeras?</span>
-          <span class="faq-icon text-petal text-2xl flex-shrink-0 ml-4 leading-none">+</span>
-        </button>
-        <div class="faq-body px-6 pb-0">
-          <p class="text-muted text-sm leading-relaxed pb-6 font-body" style="font-weight:300;">
-            Sí. Me especializo en maquillaje de novias con prueba previa incluida,
-            y en quinceañeras coordinando el look de toda la comitiva.
-            Cada sesión es única y personalizada.
-          </p>
-        </div>
-      </div>
-
-      <div class="glass rounded-2xl border border-petal/15 overflow-hidden">
-        <button class="faq-btn w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
-          <span class="font-display text-lg font-semibold text-ink">¿Qué es el balayage y lo hacés en Concordia?</span>
-          <span class="faq-icon text-petal text-2xl flex-shrink-0 ml-4 leading-none">+</span>
-        </button>
-        <div class="faq-body px-6 pb-0">
-          <p class="text-muted text-sm leading-relaxed pb-6 font-body" style="font-weight:300;">
-            El balayage es una técnica de coloración que ilumina el cabello
-            de forma natural y progresiva, sin líneas marcadas. Bajo mantenimiento
-            y resultado luminoso. Sí, soy especialista en balayage en Concordia,
-            Entre Ríos.
-          </p>
-        </div>
-      </div>
-
-      <div class="glass rounded-2xl border border-petal/15 overflow-hidden">
-        <button class="faq-btn w-full flex items-center justify-between p-6 text-left" aria-expanded="false">
-          <span class="font-display text-lg font-semibold text-ink">¿Hacés maquillaje de carnaval en Concordia?</span>
-          <span class="faq-icon text-petal text-2xl flex-shrink-0 ml-4 leading-none">+</span>
-        </button>
-        <div class="faq-body px-6 pb-0">
-          <p class="text-muted text-sm leading-relaxed pb-6 font-body" style="font-weight:300;">
-            Sí, el maquillaje artístico y de carnaval es una de mis especialidades.
-            Creo looks únicos para comparsas, teatro, fantasía y eventos especiales
-            con técnica profesional y mucha creatividad.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ===== CONTACTO ===== -->
-<section id="contacto" class="py-24 px-6 lg:px-14" style="background:linear-gradient(160deg,#fff8f5,#fdf6f0);" aria-label="Contacto">
-  <div class="max-w-5xl mx-auto">
-
-    <div class="text-center mb-16 rv">
-      <span class="pill-label mb-4 inline-flex">Contacto</span>
-      <h2 class="stitle">¿Lista para tu<br><span class="hi">próximo look? 🌸</span></h2>
-      <p class="text-muted mt-4 max-w-md mx-auto font-body" style="font-weight:300;">
-        Completá el formulario y te respondo por WhatsApp para coordinar
-        el día y la hora que mejor te quede.
-      </p>
-    </div>
-
-    <div class="grid lg:grid-cols-5 gap-8 items-start">
-
-      <!-- Form -->
-      <form id="cform" class="lg:col-span-3 glass rounded-[24px] p-8 border border-petal/20 rv" novalidate>
-        <div class="grid sm:grid-cols-2 gap-5 mb-5">
-          <div>
-            <label class="flabel" for="nm">Nombre</label>
-            <input type="text" id="nm" name="nm" class="finput" placeholder="Tu nombre" required autocomplete="name"/>
-          </div>
-          <div>
-            <label class="flabel" for="ph">WhatsApp</label>
-            <input type="tel" id="ph" name="ph" class="finput" placeholder="+54 9 ..." required autocomplete="tel"/>
-          </div>
-        </div>
-
-        <div class="mb-5">
-          <label class="flabel" for="sv">Servicio de interés</label>
-          <select id="sv" name="sv" class="finput" required>
-            <option value="" disabled selected>Seleccioná un servicio</option>
-            <option value="corte">Corte & Peinado</option>
-            <option value="colorimetria">Colorimetría & Balayage</option>
-            <option value="social">Maquillaje Social</option>
-            <option value="novia">Maquillaje de Novia</option>
-            <option value="quince">Quinceañera</option>
-            <option value="artistico">Maquillaje Artístico / Carnaval</option>
-            <option value="consulta">Consulta general</option>
-          </select>
-        </div>
-
-        <div class="mb-7">
-          <label class="flabel" for="msg">Contame más (opcional)</label>
-          <textarea id="msg" name="msg" rows="4" class="finput resize-none"
-            placeholder="¿Tenés fecha en mente? ¿Un look que te inspiró? ¡Contame!"></textarea>
-        </div>
-
-        <button type="submit" class="btn-p w-full justify-center text-sm py-4">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.217.603 4.288 1.654 6.065L.057 24l6.101-1.594A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.011-1.373l-.36-.213-3.722.973.997-3.638-.234-.374A9.775 9.775 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-          Enviar consulta por WhatsApp
-        </button>
-
-        <div id="fsuccess" class="hidden mt-4 text-center p-4 bg-green-50 border border-green-200 rounded-2xl">
-          <div class="text-2xl mb-1">🌸</div>
-          <p class="text-green-700 text-sm font-body">¡Listo! Redirigiendo a WhatsApp...</p>
-        </div>
-      </form>
-
-      <!-- Sidebar -->
-      <aside class="lg:col-span-2 flex flex-col gap-4 rvr">
-
-        <div class="glass rounded-[20px] p-6 border border-petal/15">
-          <h3 class="font-display text-lg font-semibold text-ink mb-4">Contacto directo</h3>
-          <a href="https://wa.me/5493454026404" target="_blank" rel="noopener noreferrer"
-             class="flex items-center gap-3 p-3.5 rounded-xl bg-green-50 border border-green-200 hover:bg-green-100 transition-colors mb-3">
-            <div class="w-9 h-9 rounded-full bg-[#25D366] flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.217.603 4.288 1.654 6.065L.057 24l6.101-1.594A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.011-1.373l-.36-.213-3.722.973.997-3.638-.234-.374A9.775 9.775 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+    <!-- Navegación Sticky -->
+    <nav class="fixed w-full z-50 top-0 backdrop-blur-md bg-tech-dark/80 border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-microchip text-tech-cyan text-3xl"></i>
+                    <span class="font-bold text-2xl tracking-wider">ELECTRO<span class="text-tech-cyan">TECH</span></span>
+                </div>
+                <div>
+                    <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20por%20sus%20productos." target="_blank" 
+                       class="hidden md:inline-flex items-center justify-center px-6 py-2 border border-transparent text-sm font-semibold rounded-full text-tech-dark bg-tech-cyan hover:bg-white hover:shadow-neon-hover transition-all duration-300">
+                        <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Contactar ahora
+                    </a>
+                </div>
             </div>
-            <div>
-              <p class="text-xs text-gray-400 font-body">WhatsApp</p>
-              <p class="text-sm font-semibold text-ink font-body">+54 9 3454 02-6404</p>
-            </div>
-          </a>
-          <a href="https://www.instagram.com/meli.figarola/" target="_blank" rel="noopener noreferrer"
-             class="flex items-center gap-3 p-3.5 rounded-xl bg-petal/10 border border-petal/20 hover:bg-petal/20 transition-colors">
-            <div class="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
-                 style="background:linear-gradient(135deg,#e8a0b0,#c97a90);">
-              <svg class="w-5 h-5 stroke-white fill-none" viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
-            </div>
-            <div>
-              <p class="text-xs text-gray-400 font-body">Instagram</p>
-              <p class="text-sm font-semibold text-ink font-body">@meli.figarola</p>
-            </div>
-          </a>
         </div>
+    </nav>
 
-        <div class="glass rounded-[20px] p-6 border border-petal/15">
-          <h3 class="font-display text-lg font-semibold text-ink mb-3">📍 Ubicación</h3>
-          <p class="text-muted text-sm font-body leading-relaxed" style="font-weight:300;">
-            Concordia, Entre Ríos, Argentina.<br>
-            La dirección exacta se coordina<br>al confirmar el turno.
-          </p>
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <!-- Efecto Glow de fondo -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-tech-blue/20 rounded-full blur-[120px] -z-10"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="gsap-hero text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 text-sm text-tech-cyan">
+                            <i class="fa-solid fa-bolt text-yellow-400"></i> Envíos rápidos en Zona Sur
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                            Tecnología de calidad <br> al <span class="text-gradient">mejor precio</span> en <br>Florencio Varela
+                        </h1>
+                        <p class="mt-4 text-lg text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0">
+                            Equipá tu día a día con los mejores auriculares, parlantes y accesorios. Garantía de confianza y atención 100% personalizada.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#productos" class="px-8 py-4 rounded-full bg-tech-blue hover:bg-blue-600 text-white font-semibold text-lg transition-all duration-300 shadow-neon">
+                                Ver Productos
+                            </a>
+                            <a href="https://wa.me/5491100000000?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20comprar." target="_blank" class="px-8 py-4 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 text-white font-semibold text-lg backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-green-400"></i> Comprar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Imagen Hero -->
+                    <div class="gsap-hero relative mx-auto w-full max-w-md lg:max-w-full">
+                        <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Auriculares y tecnología premium" class="rounded-2xl shadow-2xl border border-white/10 object-cover transform hover:scale-105 transition-transform duration-500">
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-tech-card p-4 rounded-xl border border-white/10 shadow-xl flex items-center gap-4 animate-bounce">
+                            <div class="bg-green-500/20 p-3 rounded-full">
+                                <i class="fa-solid fa-shield-halved text-green-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold">Garantía Asegurada</p>
+                                <p class="text-xs text-gray-400">En todos los productos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. BENEFICIOS -->
+        <section class="py-20 bg-tech-dark border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Item -->
+                    <div class="gsap-fade-up bg-tech-card p-6 rounded-2xl border border-white/5 hover:border-tech-cyan/50 transition-colors duration-300 group">
+                        <div class="w-14 h-14 bg-tech-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-colors">
+                            <i class="fa-solid fa-tags text-2xl text-tech-cyan"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Precios Accesibles</h3>
+                        <p class="text-gray-400 text-sm">La mejor relación calidad-precio del mercado local.</p>
+                    </div>
+                    <!-- Item -->
+                    <div class="gsap-fade-up bg-tech-card p-6 rounded-2xl border border-white/5 hover:border-tech-cyan/50 transition-colors duration-300 group" style="transition-delay: 100ms;">
+                        <div class="w-14 h-14 bg-tech-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-colors">
+                            <i class="fa-solid fa-award text-2xl text-tech-cyan"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Alta Calidad</h3>
+                        <p class="text-gray-400 text-sm">Productos testeados y garantizados para tu tranquilidad.</p>
+                    </div>
+                    <!-- Item -->
+                    <div class="gsap-fade-up bg-tech-card p-6 rounded-2xl border border-white/5 hover:border-tech-cyan/50 transition-colors duration-300 group" style="transition-delay: 200ms;">
+                        <div class="w-14 h-14 bg-tech-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-colors">
+                            <i class="fa-solid fa-comments text-2xl text-tech-cyan"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Atención 1 a 1</h3>
+                        <p class="text-gray-400 text-sm">Te asesoramos por WhatsApp para que elijas lo correcto.</p>
+                    </div>
+                    <!-- Item -->
+                    <div class="gsap-fade-up bg-tech-card p-6 rounded-2xl border border-white/5 hover:border-tech-cyan/50 transition-colors duration-300 group" style="transition-delay: 300ms;">
+                        <div class="w-14 h-14 bg-tech-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-colors">
+                            <i class="fa-solid fa-location-dot text-2xl text-tech-cyan"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Local en Varela</h3>
+                        <p class="text-gray-400 text-sm">Comprá cerca de tu casa con total seguridad y confianza.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PRODUCTOS DESTACADOS -->
+        <section id="productos" class="py-24 bg-gradient-tech relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 gsap-fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Top Ventas <span class="text-tech-cyan">Electro Tech</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Nuestra selección de productos más elegidos por los clientes.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Producto 1 -->
+                    <article class="gsap-fade-up bg-tech-dark rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-neon transition-all duration-300">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Auriculares Inalámbricos" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-1">Auriculares Bluetooth Pro</h3>
+                            <p class="text-gray-400 text-sm mb-4">Sonido envolvente, batería larga duración.</p>
+                            <a href="https://wa.me/5491100000000?text=Hola,%20quiero%20info%20y%20precio%20de%20los%20Auriculares%20Bluetooth%20Pro" target="_blank" class="w-full block text-center bg-white/10 hover:bg-tech-cyan hover:text-tech-dark py-2 rounded-lg font-semibold transition-colors duration-300">
+                                Consultar Precio
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="gsap-fade-up bg-tech-dark rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-neon transition-all duration-300" style="transition-delay: 100ms;">
+                        <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Parlante Portátil" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-1">Parlante Bass Boost</h3>
+                            <p class="text-gray-400 text-sm mb-4">Resistente al agua, ideal para juntadas.</p>
+                            <a href="https://wa.me/5491100000000?text=Hola,%20quiero%20info%20y%20precio%20del%20Parlante%20Bass%20Boost" target="_blank" class="w-full block text-center bg-white/10 hover:bg-tech-cyan hover:text-tech-dark py-2 rounded-lg font-semibold transition-colors duration-300">
+                                Consultar Precio
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="gsap-fade-up bg-tech-dark rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-neon transition-all duration-300" style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cargador Rápido" class="w-full h-48 object-cover bg-white">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-1">Cargador Ultra Rápido 20W</h3>
+                            <p class="text-gray-400 text-sm mb-4">Carga tu cel al 50% en 30 minutos.</p>
+                            <a href="https://wa.me/5491100000000?text=Hola,%20quiero%20info%20y%20precio%20del%20Cargador%20Ultra%20Rápido" target="_blank" class="w-full block text-center bg-white/10 hover:bg-tech-cyan hover:text-tech-dark py-2 rounded-lg font-semibold transition-colors duration-300">
+                                Consultar Precio
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Producto 4 -->
+                    <article class="gsap-fade-up bg-tech-dark rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-neon transition-all duration-300" style="transition-delay: 300ms;">
+                        <img src="https://images.unsplash.com/photo-1625842268584-8f3296236761?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Smartwatch" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold mb-1">Smartwatch Fit Pro</h3>
+                            <p class="text-gray-400 text-sm mb-4">Notificaciones, ritmo cardíaco y más.</p>
+                            <a href="https://wa.me/5491100000000?text=Hola,%20quiero%20info%20y%20precio%20del%20Smartwatch" target="_blank" class="w-full block text-center bg-white/10 hover:bg-tech-cyan hover:text-tech-dark py-2 rounded-lg font-semibold transition-colors duration-300">
+                                Consultar Precio
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. POR QUÉ ELEGIRNOS -->
+        <section class="py-24 bg-tech-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="gsap-fade-right">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">No somos una tienda más, <br><span class="text-tech-cyan">somos tu aliado tech</span></h2>
+                        <p class="text-gray-400 mb-8 text-lg">En Electro Tech entendemos lo frustrante que es comprar tecnología y que falle al poco tiempo. Por eso probamos cada producto antes de venderlo.</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 bg-tech-card p-4 rounded-xl border border-white/5">
+                                <i class="fa-solid fa-circle-check text-tech-cyan text-xl"></i>
+                                <span class="font-medium">Cambio directo por fallas de fábrica.</span>
+                            </li>
+                            <li class="flex items-center gap-4 bg-tech-card p-4 rounded-xl border border-white/5">
+                                <i class="fa-solid fa-circle-check text-tech-cyan text-xl"></i>
+                                <span class="font-medium">Asesoramiento post-venta real.</span>
+                            </li>
+                            <li class="flex items-center gap-4 bg-tech-card p-4 rounded-xl border border-white/5">
+                                <i class="fa-solid fa-circle-check text-tech-cyan text-xl"></i>
+                                <span class="font-medium">Stock actualizado permanentemente.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gsap-fade-left relative">
+                        <!-- Abstract Tech Shape / Image -->
+                        <div class="aspect-square rounded-3xl overflow-hidden relative border border-white/10 shadow-neon">
+                            <img src="https://images.unsplash.com/photo-1550009158-9ebf6d1733dea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tecnología abstracta" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-tech-dark via-transparent to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TESTIMONIOS (Social Proof) -->
+        <section class="py-24 bg-tech-card border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 gsap-fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que dicen en <span class="text-tech-blue">Florencio Varela</span></h2>
+                    <p class="text-gray-400">La confianza de nuestros clientes es nuestra mejor publicidad.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="gsap-fade-up bg-tech-dark p-8 rounded-2xl border border-white/5 relative">
+                        <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-tech-blue/20"></i>
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Compré unos auriculares para entrenar y me salieron buenísimos. La atención por WhatsApp fue de 10, súper amables y rápidos."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-tech-blue/20 rounded-full flex items-center justify-center font-bold text-tech-cyan">M</div>
+                            <div>
+                                <p class="font-bold text-sm">Martín G.</p>
+                                <p class="text-xs text-gray-500">Cliente Verificado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="gsap-fade-up bg-tech-dark p-8 rounded-2xl border border-white/5 relative" style="transition-delay: 100ms;">
+                        <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-tech-blue/20"></i>
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Buscaba un cargador original porque los truchos me arruinaban la batería. Encontré a Electro Tech y me solucionaron el problema en el día."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-tech-blue/20 rounded-full flex items-center justify-center font-bold text-tech-cyan">L</div>
+                            <div>
+                                <p class="font-bold text-sm">Laura S.</p>
+                                <p class="text-xs text-gray-500">Cliente Verificado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 3 -->
+                    <div class="gsap-fade-up bg-tech-dark p-8 rounded-2xl border border-white/5 relative" style="transition-delay: 200ms;">
+                        <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-tech-blue/20"></i>
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6">"Muy buenos precios comparado con locales del centro. Les escribí, coordinamos y pasé a retirar súper fácil. Recomendados."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-tech-blue/20 rounded-full flex items-center justify-center font-bold text-tech-cyan">D</div>
+                            <div>
+                                <p class="font-bold text-sm">Diego F.</p>
+                                <p class="text-xs text-gray-500">Cliente Verificado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. IA SEO / FAQ (Preguntas Frecuentes Semánticas) -->
+        <section class="py-20 bg-tech-dark">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 gsap-fade-up">
+                <h2 class="text-2xl font-bold mb-8 text-center">Dudas Frecuentes (FAQ)</h2>
+                <div class="space-y-4">
+                    <!-- Pregunta 1 -->
+                    <details class="bg-tech-card border border-white/5 rounded-lg overflow-hidden group cursor-pointer">
+                        <summary class="px-6 py-4 font-semibold flex justify-between items-center group-open:text-tech-cyan transition-colors">
+                            ¿Hacen envíos en Florencio Varela?
+                            <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-4 text-gray-400 text-sm">
+                            Sí, realizamos entregas rápidas en todo Florencio Varela y zonas aledañas de Zona Sur. Consultanos por WhatsApp con tu ubicación para confirmarte el costo o si es envío gratis.
+                        </div>
+                    </details>
+                    <!-- Pregunta 2 -->
+                    <details class="bg-tech-card border border-white/5 rounded-lg overflow-hidden group cursor-pointer">
+                        <summary class="px-6 py-4 font-semibold flex justify-between items-center group-open:text-tech-cyan transition-colors">
+                            ¿Los productos tienen garantía?
+                            <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-4 text-gray-400 text-sm">
+                            Absolutamente. Todos nuestros artículos (auriculares, parlantes, cargadores) cuentan con garantía por fallas de fábrica. Si algo no funciona correctamente, te lo cambiamos.
+                        </div>
+                    </details>
+                    <!-- Pregunta 3 -->
+                    <details class="bg-tech-card border border-white/5 rounded-lg overflow-hidden group cursor-pointer">
+                        <summary class="px-6 py-4 font-semibold flex justify-between items-center group-open:text-tech-cyan transition-colors">
+                            ¿Cuáles son los métodos de pago?
+                            <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-4 text-gray-400 text-sm">
+                            Aceptamos efectivo, transferencias bancarias (MercadoPago, Cuenta DNI) y tarjetas. Consultá por promociones vigentes al momento de hacer tu pedido.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. UBICACIÓN -->
+        <section class="py-20 bg-gradient-tech border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center gsap-fade-up">
+                <i class="fa-solid fa-map-location-dot text-4xl text-tech-cyan mb-4"></i>
+                <h2 class="text-3xl font-bold mb-4">Estamos en Florencio Varela</h2>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Venta online con punto de entrega y envíos en toda la zona sur de Buenos Aires. ¡Escribinos para coordinar!</p>
+                <!-- Placeholder de mapa (Se puede cambiar por un iframe real de Google Maps) -->
+                <div class="w-full max-w-4xl mx-auto h-64 bg-tech-dark border border-white/10 rounded-2xl flex items-center justify-center text-gray-500 overflow-hidden relative">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                    <p class="relative z-10 flex flex-col items-center gap-2">
+                        <i class="fa-solid fa-location-crosshairs text-2xl text-tech-blue"></i>
+                        Centro de Florencio Varela, GBA Sur
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA FINAL FUERTE -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-tech-blue/10 blur-3xl -z-10"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center gsap-fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">¿Listo para llevar tu tecnología al <span class="text-gradient">siguiente nivel</span>?</h2>
+                <p class="text-xl text-gray-300 mb-10">No des más vueltas. Mandanos un WhatsApp, decinos qué buscás y te lo preparamos.</p>
+                <a href="https://wa.me/5491100000000?text=Hola%20Electro%20Tech!%20Quiero%20comprar." target="_blank" 
+                   class="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-105 transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp mr-3 text-2xl"></i> Hablar con un Asesor
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-tech-dark border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- Marca -->
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-microchip text-tech-cyan text-2xl"></i>
+                    <span class="font-bold text-xl tracking-wider text-gray-300">ELECTRO<span class="text-white">TECH</span></span>
+                </div>
+                
+                <!-- Redes -->
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-tech-cyan hover:shadow-neon transition-all duration-300">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-tech-blue transition-all duration-300">
+                        <i class="fa-brands fa-facebook-f text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-white/5 text-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> Electro Tech Florencio Varela. Todos los derechos reservados.</p>
+            </div>
         </div>
+    </footer>
 
-        <div class="glass rounded-[20px] p-6 border border-petal/15">
-          <h3 class="font-display text-lg font-semibold text-ink mb-3">🕐 Horarios</h3>
-          <div class="text-sm text-muted font-body space-y-1.5" style="font-weight:300;">
-            <div class="flex justify-between"><span>Lunes a viernes</span><span class="font-medium text-ink">9:00 – 19:00</span></div>
-            <div class="flex justify-between"><span>Sábados</span><span class="font-medium text-ink">9:00 – 14:00</span></div>
-            <div class="flex justify-between text-gray-400"><span>Domingos</span><span>Con turno previo</span></div>
-          </div>
-        </div>
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/5491100000000?text=Hola!%20Vengo%20de%20la%20landing%20page%20y%20tengo%20una%20consulta." 
+       target="_blank" 
+       class="btn-whatsapp-float fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform duration-300"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-      </aside>
+    <!-- SCRIPTS -->
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis (Smooth Scroll) -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 
-    </div>
+    <script>
+        // Actualizar Año Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
 
-  </div>
-</section>
-
-
-<!-- ===== FOOTER ===== -->
-<footer class="bg-ink text-white py-14 px-6 lg:px-14" aria-label="Pie de página">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-3 gap-10 mb-10">
-
-      <div>
-        <p class="font-display text-2xl font-semibold mb-1">Meli Figarola</p>
-        <p class="text-[11px] tracking-[0.15em] text-petal/60 uppercase mb-4">Peluquería · Maquillaje · Arte</p>
-        <p class="text-gray-400 text-sm leading-relaxed font-body" style="font-weight:300;">
-          Peluquería profesional y maquillaje artístico en Concordia, Entre Ríos.
-          Atención personalizada con empatía y pasión.
-        </p>
-      </div>
-
-      <div>
-        <h4 class="text-xs font-body font-medium tracking-widest uppercase text-gray-400 mb-4">Servicios</h4>
-        <ul class="space-y-2 text-gray-400 text-sm font-body" style="font-weight:300;">
-          <li>Corte & Peinado</li>
-          <li>Colorimetría & Balayage</li>
-          <li>Maquillaje Social</li>
-          <li>Novias & Quinceañeras</li>
-          <li>Maquillaje Artístico / Carnaval</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-xs font-body font-medium tracking-widest uppercase text-gray-400 mb-4">Contacto</h4>
-        <ul class="space-y-3 text-sm font-body">
-          <li>
-            <a href="https://wa.me/5493454026404" target="_blank" rel="noopener noreferrer"
-               class="text-gray-400 hover:text-petal transition-colors flex items-center gap-2" style="font-weight:300;">
-              <svg class="w-4 h-4 fill-[#25D366]" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.217.603 4.288 1.654 6.065L.057 24l6.101-1.594A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.011-1.373l-.36-.213-3.722.973.997-3.638-.234-.374A9.775 9.775 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-              +54 9 3454 02-6404
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/meli.figarola/" target="_blank" rel="noopener noreferrer"
-               class="text-gray-400 hover:text-petal transition-colors flex items-center gap-2" style="font-weight:300;">
-              <svg class="w-4 h-4 stroke-current fill-none" viewBox="0 0 24 24" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
-              @meli.figarola
-            </a>
-          </li>
-          <li class="text-gray-500 flex items-center gap-2" style="font-weight:300;">
-            <svg class="w-4 h-4 stroke-current fill-none flex-shrink-0" viewBox="0 0 24 24" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            Concordia, Entre Ríos
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-gray-600 text-xs font-body">© 2025 Meli Figarola. Todos los derechos reservados.</p>
-      <p class="text-gray-600 text-xs font-body">
-        Diseño & desarrollo por
-        <a href="https://hernysgodoy.com" target="_blank" rel="noopener noreferrer"
-           class="text-petal/50 hover:text-petal transition-colors">Herny Godoy</a>
-      </p>
-    </div>
-  </div>
-</footer>
-
-
-<!-- ===== WHATSAPP FLOAT ===== -->
-<a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Vi%20tu%20web%20y%20quiero%20consultar%20un%20turno%20%F0%9F%8C%B8"
-   target="_blank" rel="noopener noreferrer"
-   class="wa" aria-label="Contactar a Meli Figarola por WhatsApp">
-  <div class="wa-ring" aria-hidden="true"></div>
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.217.603 4.288 1.654 6.065L.057 24l6.101-1.594A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.011-1.373l-.36-.213-3.722.973.997-3.638-.234-.374A9.775 9.775 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
-  </svg>
-</a>
-
-
-<script>
-  gsap.registerPlugin(ScrollTrigger);
-
-  // ---- Lenis smooth scroll ----
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-  });
-  // Sync Lenis con GSAP ticker
-  gsap.ticker.add(time => lenis.raf(time * 1000));
-  gsap.ticker.lagSmoothing(0);
-  // Sync ScrollTrigger con Lenis
-  lenis.on('scroll', ScrollTrigger.update);
-
-  // ---- Navbar ----
-  const nb = document.getElementById('navbar');
-  lenis.on('scroll', ({ scroll }) => nb.classList.toggle('scrolled', scroll > 50));
-
-  // ---- Mobile menu ----
-  const ham = document.getElementById('ham');
-  const mob = document.getElementById('mob-nav');
-  let open = false;
-  ham.addEventListener('click', () => {
-    open = !open;
-    ham.setAttribute('aria-expanded', open);
-    mob.style.maxHeight = open ? mob.scrollHeight + 'px' : '0';
-    mob.style.opacity  = open ? '1' : '0';
-    document.getElementById('h1').style.transform = open ? 'rotate(45deg) translate(4px,4px)' : '';
-    document.getElementById('h2').style.opacity   = open ? '0' : '1';
-    document.getElementById('h3').style.transform = open ? 'rotate(-45deg) translate(3px,-3px)' : '';
-    document.getElementById('h3').style.width     = open ? '24px' : '';
-  });
-  mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    open = false;
-    ham.setAttribute('aria-expanded', false);
-    mob.style.maxHeight = '0'; mob.style.opacity = '0';
-    ['h1','h2','h3'].forEach(id => { const el = document.getElementById(id); el.style.transform=''; el.style.opacity='1'; el.style.width=''; });
-  }));
-
-  // ---- Hero entrance — usa fromTo con clearProps para no dejar residuos ----
-  // Setear estado inicial via gsap.set (nunca via CSS en elementos animados por timeline)
-  gsap.set(['.h-pill', '.h-title', '.h-sub', '.h-btns', '.h-stats', '.h-mosaic'], {
-    opacity: 0, y: 30
-  });
-  gsap.set('.h-mosaic', { opacity: 0, y: 0, x: 40 });
-
-  gsap.timeline({ delay: 0.2, defaults: { ease: 'power3.out' } })
-    .to('.h-pill',   { opacity:1, y:0, duration:0.55, clearProps:'transform' })
-    .to('.h-title',  { opacity:1, y:0, duration:0.75, clearProps:'transform' }, '-=0.25')
-    .to('.h-sub',    { opacity:1, y:0, duration:0.65, clearProps:'transform' }, '-=0.35')
-    .to('.h-btns',   { opacity:1, y:0, duration:0.55, clearProps:'transform' }, '-=0.3')
-    .to('.h-stats',  { opacity:1, y:0, duration:0.5,  clearProps:'transform' }, '-=0.25')
-    .to('.h-mosaic', { opacity:1, x:0, duration:0.85, clearProps:'transform' }, '-=0.45');
-
-  // ---- Scroll reveals — estado inicial via GSAP, no CSS ----
-  gsap.set('.rv',  { opacity:0, y:38 });
-  gsap.set('.rvl', { opacity:0, x:-48 });
-  gsap.set('.rvr', { opacity:0, x:48 });
-
-  gsap.utils.toArray('.rv').forEach(el => {
-    gsap.to(el, {
-      opacity:1, y:0, duration:0.8, ease:'power3.out',
-      scrollTrigger:{ trigger:el, start:'top 88%', toggleActions:'play none none none' }
-    });
-  });
-  gsap.utils.toArray('.rvl').forEach(el => {
-    gsap.to(el, {
-      opacity:1, x:0, duration:0.9, ease:'power3.out',
-      scrollTrigger:{ trigger:el, start:'top 85%', toggleActions:'play none none none' }
-    });
-  });
-  gsap.utils.toArray('.rvr').forEach(el => {
-    gsap.to(el, {
-      opacity:1, x:0, duration:0.9, ease:'power3.out',
-      scrollTrigger:{ trigger:el, start:'top 85%', toggleActions:'play none none none' }
-    });
-  });
-
-  // ---- Portfolio stagger ----
-  gsap.set('.port-item', { opacity:0, scale:0.93 });
-  gsap.to('.port-item', {
-    opacity:1, scale:1, stagger:0.07, duration:0.65, ease:'power2.out',
-    scrollTrigger:{ trigger:'#portfolio', start:'top 78%' }
-  });
-
-  // ---- Service cards ----
-  gsap.set('.svc-card', { opacity:0, y:28 });
-  gsap.to('.svc-card', {
-    opacity:1, y:0, stagger:0.08, duration:0.6, ease:'power2.out',
-    scrollTrigger:{ trigger:'#servicios', start:'top 78%' }
-  });
-
-  // ---- Counters ----
-  document.querySelectorAll('.stat-n[data-target]').forEach(el => {
-    const tgt = parseInt(el.dataset.target);
-    const suf = el.dataset.suffix || '';
-    ScrollTrigger.create({ trigger:el, start:'top 90%', once:true,
-      onEnter: () => {
-        gsap.fromTo({ v:0 }, { v:tgt, duration:1.8, ease:'power2.out',
-          onUpdate: function(){ el.textContent = Math.round(this.targets()[0].v) + suf; }
+        // 1. Inicializar Lenis (Smooth Scroll Moderno)
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
         });
-      }
-    });
-  });
 
-  // ---- FAQ accordion ----
-  document.querySelectorAll('.faq-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const body = btn.nextElementSibling;
-      const icon = btn.querySelector('.faq-icon');
-      const isOpen = body.classList.contains('open');
-      document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'));
-      document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
-      document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded','false'));
-      if (!isOpen) {
-        body.classList.add('open');
-        icon.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
-      }
-    });
-  });
+        // Conectar Lenis con GSAP
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => { lenis.raf(time * 1000) });
+        gsap.ticker.lagSmoothing(0);
 
-  // ---- Form → WhatsApp ----
-  const svLabels = { corte:'Corte & Peinado', colorimetria:'Colorimetría & Balayage', social:'Maquillaje Social', novia:'Maquillaje de Novia', quince:'Quinceañera', artistico:'Maquillaje Artístico / Carnaval', consulta:'Consulta general' };
-  document.getElementById('cform').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nm = document.getElementById('nm').value.trim();
-    const ph = document.getElementById('ph').value.trim();
-    const sv = document.getElementById('sv').value;
-    const msg = document.getElementById('msg').value.trim();
-    if (!nm || !ph || !sv) { alert('Por favor completá tu nombre, WhatsApp y servicio.'); return; }
-    let txt = `Hola Meli! 🌸 Vi tu web y quiero consultar un turno.\n\n*Nombre:* ${nm}\n*Mi WhatsApp:* ${ph}\n*Servicio:* ${svLabels[sv]||sv}`;
-    if (msg) txt += `\n*Consulta:* ${msg}`;
-    window.open(`https://wa.me/5493454026404?text=${encodeURIComponent(txt)}`, '_blank');
-    const ok = document.getElementById('fsuccess');
-    ok.classList.remove('hidden');
-    gsap.from(ok, { opacity:0, y:8, duration:0.4, ease:'power2.out' });
-    this.reset();
-  });
+        // 2. Animaciones GSAP
+        gsap.registerPlugin(ScrollTrigger);
 
-  // ---- Smooth anchor scroll via Lenis ----
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        lenis.scrollTo(target, { offset: -80, duration: 1.4 });
-      }
-    });
-  });
-</script>
+        // Animación de entrada Hero
+        gsap.from(".gsap-hero", {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out",
+            delay: 0.2
+        });
 
+        // Animación Fade Up general
+        gsap.utils.toArray('.gsap-fade-up').forEach(element => {
+            gsap.from(element, {
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 85%", // Se activa cuando el top del elemento alcanza el 85% del viewport
+                    toggleActions: "play none none reverse"
+                },
+                y: 40,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.out"
+            });
+        });
+
+        // Animaciones laterales
+        gsap.from(".gsap-fade-right", {
+            scrollTrigger: { trigger: ".gsap-fade-right", start: "top 80%" },
+            x: -50, opacity: 0, duration: 1, ease: "power2.out"
+        });
+        
+        gsap.from(".gsap-fade-left", {
+            scrollTrigger: { trigger: ".gsap-fade-left", start: "top 80%" },
+            x: 50, opacity: 0, duration: 1, ease: "power2.out"
+        });
+
+        // 3. Lógica simple para Accordion (FAQ) - Cerrar los demás al abrir uno
+        const details = document.querySelectorAll("details");
+        details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
