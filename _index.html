@@ -263,8 +263,10 @@
       font-weight: 600; line-height: 1.1; color: #2a2022;
     }
 
-    /* Reveal — estado inicial manejado por GSAP, no CSS */
-    .rv, .rvl, .rvr { will-change: transform, opacity; }
+    /* Reveal */
+    .rv  { opacity: 0; transform: translateY(35px); }
+    .rvl { opacity: 0; transform: translateX(-45px); }
+    .rvr { opacity: 0; transform: translateX(45px); }
 
     /* Mobile nav */
     #mob-nav { transition: max-height 0.45s ease, opacity 0.35s ease; max-height: 0; opacity: 0; overflow: hidden; }
@@ -1130,41 +1132,43 @@
     .to('.h-stats',  { opacity:1, y:0, duration:0.5,  clearProps:'transform' }, '-=0.25')
     .to('.h-mosaic', { opacity:1, x:0, duration:0.85, clearProps:'transform' }, '-=0.45');
 
-  // ---- Scroll reveals — estado inicial via GSAP, no CSS ----
-  gsap.set('.rv',  { opacity:0, y:38 });
-  gsap.set('.rvl', { opacity:0, x:-48 });
-  gsap.set('.rvr', { opacity:0, x:48 });
-
+  // ---- Scroll reveals — excluye elementos del hero ----
   gsap.utils.toArray('.rv').forEach(el => {
-    gsap.to(el, {
-      opacity:1, y:0, duration:0.8, ease:'power3.out',
-      scrollTrigger:{ trigger:el, start:'top 88%', toggleActions:'play none none none' }
-    });
+    gsap.fromTo(el,
+      { opacity:0, y:38 },
+      { opacity:1, y:0, duration:0.8, ease:'power3.out', clearProps:'transform,opacity',
+        scrollTrigger:{ trigger:el, start:'top 88%', toggleActions:'play none none none' }
+      }
+    );
   });
   gsap.utils.toArray('.rvl').forEach(el => {
-    gsap.to(el, {
-      opacity:1, x:0, duration:0.9, ease:'power3.out',
-      scrollTrigger:{ trigger:el, start:'top 85%', toggleActions:'play none none none' }
-    });
+    gsap.fromTo(el,
+      { opacity:0, x:-48 },
+      { opacity:1, x:0, duration:0.9, ease:'power3.out', clearProps:'transform,opacity',
+        scrollTrigger:{ trigger:el, start:'top 85%', toggleActions:'play none none none' }
+      }
+    );
   });
   gsap.utils.toArray('.rvr').forEach(el => {
-    gsap.to(el, {
-      opacity:1, x:0, duration:0.9, ease:'power3.out',
-      scrollTrigger:{ trigger:el, start:'top 85%', toggleActions:'play none none none' }
-    });
+    gsap.fromTo(el,
+      { opacity:0, x:48 },
+      { opacity:1, x:0, duration:0.9, ease:'power3.out', clearProps:'transform,opacity',
+        scrollTrigger:{ trigger:el, start:'top 85%', toggleActions:'play none none none' }
+      }
+    );
   });
 
   // ---- Portfolio stagger ----
-  gsap.set('.port-item', { opacity:0, scale:0.93 });
-  gsap.to('.port-item', {
-    opacity:1, scale:1, stagger:0.07, duration:0.65, ease:'power2.out',
+  gsap.from('.port-item', {
+    opacity:0, scale:0.93, stagger:0.07, duration:0.65, ease:'power2.out',
+    clearProps:'transform,opacity',
     scrollTrigger:{ trigger:'#portfolio', start:'top 78%' }
   });
 
   // ---- Service cards ----
-  gsap.set('.svc-card', { opacity:0, y:28 });
-  gsap.to('.svc-card', {
-    opacity:1, y:0, stagger:0.08, duration:0.6, ease:'power2.out',
+  gsap.from('.svc-card', {
+    opacity:0, y:28, stagger:0.08, duration:0.6, ease:'power2.out',
+    clearProps:'transform,opacity',
     scrollTrigger:{ trigger:'#servicios', start:'top 78%' }
   });
 
