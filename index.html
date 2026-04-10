@@ -1,541 +1,521 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es-AR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Básico -->
-    <title>ELECTRO TECH | Tecnología y Accesorios en Florencio Varela</title>
-    <meta name="description" content="Encontrá la mejor tecnología, auriculares, parlantes y accesorios al mejor precio en Florencio Varela. Envíos rápidos y atención personalizada. ¡Comprá por WhatsApp!">
-    <meta name="keywords" content="electrónica Florencio Varela, accesorios para celulares, auriculares bluetooth, parlantes, cargadores, tecnología zona sur, Electro Tech">
-    <meta name="author" content="Electro Tech">
+    <title>Meli Figarola Peluquería | Especialista en Balayage y Color en Argentina</title>
+    <meta name="description" content="Transformá tu cabello y renová tu energía. Meli Figarola es tu peluquería de confianza. Especialistas en balayage, coloración, alisados y maquillaje profesional. Reservá tu turno.">
+    <meta name="keywords" content="peluquería en argentina, balayage profesional, alisado, colorista, peluquera profesional, corte de pelo, maquillaje, diseño de color">
+    <meta name="author" content="Meli Figarola">
     
     <!-- Open Graph / Redes Sociales -->
-    <meta property="og:title" content="ELECTRO TECH | Tienda de Tecnología en Florencio Varela">
-    <meta property="og:description" content="Tecnología de calidad al mejor precio. Auriculares, parlantes y más. ¡Hacé tu pedido por WhatsApp hoy!">
+    <meta property="og:title" content="Meli Figarola Peluquería | Tu mejor versión">
+    <meta property="og:description" content="Especialistas en balayage, color y tratamientos capilares. Atención personalizada y un ambiente para relajarte.">
     <meta property="og:type" content="website">
     
-    <!-- Google Fonts: Outfit (Moderna, Tech) -->
+    <!-- Fuentes Google: Playfair Display (Elegancia/Títulos) & Inter (Lecturabilidad/Textos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome (Iconos) -->
+    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS (Configuración Custom) -->
+    <!-- Tailwind CSS (Script CDN para configuración en vivo) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
                     colors: {
-                        tech: {
-                            dark: '#0B0F19', // Fondo principal
-                            card: '#111827', // Fondo tarjetas
-                            blue: '#3B82F6', // Azul principal
-                            cyan: '#22D3EE', // Cyan neon
-                        }
+                        'brand-pink': '#F4E8E8', // Rosa muy suave basado en la gráfica
+                        'brand-rose': '#D29B9B', // Rosa flor logo
+                        'brand-dark': '#2B2A29', // Gris oscuro casi negro del logo
                     },
-                    boxShadow: {
-                        'neon': '0 0 15px rgba(34, 211, 238, 0.3)',
-                        'neon-hover': '0 0 25px rgba(34, 211, 238, 0.6)',
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
 
-    <!-- CSS Personalizado para utilidades extra -->
+    <!-- Estilos Custom extra -->
     <style>
-        body { background-color: #0B0F19; color: #ffffff; }
-        .text-gradient {
-            background: linear-gradient(to right, #3B82F6, #22D3EE);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .bg-gradient-tech {
-            background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(34,211,238,0.05) 100%);
-        }
-        /* Ocultar scrollbar pero permitir scroll */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0B0F19; }
-        ::-webkit-scrollbar-thumb { background: #3B82F6; border-radius: 4px; }
+        /* Ocultar elementos para animación inicial GSAP */
+        .gsap-reveal { visibility: hidden; }
         
-        /* Animación pulso WhatsApp */
-        @keyframes pulse-wpp {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        /* Efecto pulsante para botón WhatsApp */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-        .btn-whatsapp-float { animation: pulse-wpp 2s infinite; }
+        .wpp-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+        
+        /* Estilo para las imágenes de galería */
+        .gallery-img:hover img { transform: scale(1.05); }
     </style>
 
-    <!-- SEO Técnico: Schema Markup para IA y Google Local -->
+    <!-- Schema JSON-LD para SEO Local y Motores de Búsqueda de IA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ElectronicsStore",
-      "name": "ELECTRO TECH",
-      "image": "URL_DE_TU_LOGO_O_IMAGEN",
-      "description": "Tienda de electrónica y accesorios tecnológicos en Florencio Varela. Venta de auriculares, parlantes, cargadores y más.",
+      "@type": "HairSalon",
+      "name": "Meli Figarola Peluquería",
+      "image": "URL_DE_TU_LOGO_AQUI",
+      "@id": "",
+      "url": "TU_DOMINIO_AQUI",
+      "telephone": "+5493454026404",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Centro",
-        "addressLocality": "Florencio Varela",
-        "addressRegion": "Buenos Aires",
+        "addressLocality": "Argentina",
         "addressCountry": "AR"
       },
-      "telephone": "+5491100000000",
-      "priceRange": "$$"
+      "priceRange": "$$",
+      "description": "Peluquería profesional en Argentina especializada en balayage, colorimetría, alisados, cortes de tendencia y maquillaje. Atención cálida y personalizada.",
+      "sameAs": [
+        "URL_DE_TU_INSTAGRAM"
+      ]
     }
     </script>
 </head>
-<body class="antialiased selection:bg-tech-cyan selection:text-tech-dark">
+<body class="font-sans text-brand-dark bg-[#FAFAFA] overflow-x-hidden">
 
-    <!-- Navegación Sticky -->
-    <nav class="fixed w-full z-50 top-0 backdrop-blur-md bg-tech-dark/80 border-b border-white/10 transition-all duration-300">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-brand-pink transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-                    <i class="fa-solid fa-microchip text-tech-cyan text-3xl"></i>
-                    <span class="font-bold text-2xl tracking-wider">ELECTRO<span class="text-tech-cyan">TECH</span></span>
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- Aquí puedes poner la etiqueta <img> de tu logo real. Uso texto estilizado por ahora -->
+                    <span class="font-serif font-bold text-2xl tracking-widest text-brand-dark">MELI FIGAROLA</span>
                 </div>
-                <div>
-                    <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20por%20sus%20productos." target="_blank" 
-                       class="hidden md:inline-flex items-center justify-center px-6 py-2 border border-transparent text-sm font-semibold rounded-full text-tech-dark bg-tech-cyan hover:bg-white hover:shadow-neon-hover transition-all duration-300">
-                        <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Contactar ahora
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#servicios" class="text-sm font-medium hover:text-brand-rose transition-colors">Servicios</a>
+                    <a href="#portfolio" class="text-sm font-medium hover:text-brand-rose transition-colors">Trabajos</a>
+                    <a href="#sobre-meli" class="text-sm font-medium hover:text-brand-rose transition-colors">Conoceme</a>
+                    <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="bg-brand-dark text-white px-5 py-2.5 rounded-full text-sm hover:bg-brand-rose transition-colors shadow-lg">
+                        Reservar Turno
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main>
-        <!-- 1. HERO SECTION -->
-        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-            <!-- Efecto Glow de fondo -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-tech-blue/20 rounded-full blur-[120px] -z-10"></div>
-            
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="gsap-hero text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6 text-sm text-tech-cyan">
-                            <i class="fa-solid fa-bolt text-yellow-400"></i> Envíos rápidos en Zona Sur
-                        </div>
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                            Tecnología de calidad <br> al <span class="text-gradient">mejor precio</span> en <br>Florencio Varela
-                        </h1>
-                        <p class="mt-4 text-lg text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0">
-                            Equipá tu día a día con los mejores auriculares, parlantes y accesorios. Garantía de confianza y atención 100% personalizada.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="#productos" class="px-8 py-4 rounded-full bg-tech-blue hover:bg-blue-600 text-white font-semibold text-lg transition-all duration-300 shadow-neon">
-                                Ver Productos
-                            </a>
-                            <a href="https://wa.me/5491100000000?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20comprar." target="_blank" class="px-8 py-4 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 text-white font-semibold text-lg backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-2">
-                                <i class="fa-brands fa-whatsapp text-green-400"></i> Comprar por WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Imagen Hero -->
-                    <div class="gsap-hero relative mx-auto w-full max-w-md lg:max-w-full">
-                        <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Auriculares y tecnología premium" class="rounded-2xl shadow-2xl border border-white/10 object-cover transform hover:scale-105 transition-transform duration-500">
-                        <!-- Floating Badge -->
-                        <div class="absolute -bottom-6 -left-6 bg-tech-card p-4 rounded-xl border border-white/10 shadow-xl flex items-center gap-4 animate-bounce">
-                            <div class="bg-green-500/20 p-3 rounded-full">
-                                <i class="fa-solid fa-shield-halved text-green-400 text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm font-bold">Garantía Asegurada</p>
-                                <p class="text-xs text-gray-400">En todos los productos</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. BENEFICIOS -->
-        <section class="py-20 bg-tech-dark border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Item -->
-                    <div class="gsap-fade-up bg-tech-card p-6 rounded-2xl border border-white/5 hover:border-tech-cyan/50 transition-colors duration-300 group">
-                        <div class="w-14 h-14 bg-tech-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-colors">
-                            <i class="fa-solid fa-tags text-2xl text-tech-cyan"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Precios Accesibles</h3>
-                        <p class="text-gray-400 text-sm">La mejor relación calidad-precio del mercado local.</p>
-                    </div>
-                    <!-- Item -->
-                    <div class="gsap-fade-up bg-tech-card p-6 rounded-2xl border border-white/5 hover:border-tech-cyan/50 transition-colors duration-300 group" style="transition-delay: 100ms;">
-                        <div class="w-14 h-14 bg-tech-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-colors">
-                            <i class="fa-solid fa-award text-2xl text-tech-cyan"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Alta Calidad</h3>
-                        <p class="text-gray-400 text-sm">Productos testeados y garantizados para tu tranquilidad.</p>
-                    </div>
-                    <!-- Item -->
-                    <div class="gsap-fade-up bg-tech-card p-6 rounded-2xl border border-white/5 hover:border-tech-cyan/50 transition-colors duration-300 group" style="transition-delay: 200ms;">
-                        <div class="w-14 h-14 bg-tech-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-colors">
-                            <i class="fa-solid fa-comments text-2xl text-tech-cyan"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Atención 1 a 1</h3>
-                        <p class="text-gray-400 text-sm">Te asesoramos por WhatsApp para que elijas lo correcto.</p>
-                    </div>
-                    <!-- Item -->
-                    <div class="gsap-fade-up bg-tech-card p-6 rounded-2xl border border-white/5 hover:border-tech-cyan/50 transition-colors duration-300 group" style="transition-delay: 300ms;">
-                        <div class="w-14 h-14 bg-tech-blue/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-colors">
-                            <i class="fa-solid fa-location-dot text-2xl text-tech-cyan"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Local en Varela</h3>
-                        <p class="text-gray-400 text-sm">Comprá cerca de tu casa con total seguridad y confianza.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. PRODUCTOS DESTACADOS -->
-        <section id="productos" class="py-24 bg-gradient-tech relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 gsap-fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Top Ventas <span class="text-tech-cyan">Electro Tech</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto">Nuestra selección de productos más elegidos por los clientes.</p>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Producto 1 -->
-                    <article class="gsap-fade-up bg-tech-dark rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-neon transition-all duration-300">
-                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Auriculares Inalámbricos" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold mb-1">Auriculares Bluetooth Pro</h3>
-                            <p class="text-gray-400 text-sm mb-4">Sonido envolvente, batería larga duración.</p>
-                            <a href="https://wa.me/5491100000000?text=Hola,%20quiero%20info%20y%20precio%20de%20los%20Auriculares%20Bluetooth%20Pro" target="_blank" class="w-full block text-center bg-white/10 hover:bg-tech-cyan hover:text-tech-dark py-2 rounded-lg font-semibold transition-colors duration-300">
-                                Consultar Precio
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 2 -->
-                    <article class="gsap-fade-up bg-tech-dark rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-neon transition-all duration-300" style="transition-delay: 100ms;">
-                        <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Parlante Portátil" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold mb-1">Parlante Bass Boost</h3>
-                            <p class="text-gray-400 text-sm mb-4">Resistente al agua, ideal para juntadas.</p>
-                            <a href="https://wa.me/5491100000000?text=Hola,%20quiero%20info%20y%20precio%20del%20Parlante%20Bass%20Boost" target="_blank" class="w-full block text-center bg-white/10 hover:bg-tech-cyan hover:text-tech-dark py-2 rounded-lg font-semibold transition-colors duration-300">
-                                Consultar Precio
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 3 -->
-                    <article class="gsap-fade-up bg-tech-dark rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-neon transition-all duration-300" style="transition-delay: 200ms;">
-                        <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cargador Rápido" class="w-full h-48 object-cover bg-white">
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold mb-1">Cargador Ultra Rápido 20W</h3>
-                            <p class="text-gray-400 text-sm mb-4">Carga tu cel al 50% en 30 minutos.</p>
-                            <a href="https://wa.me/5491100000000?text=Hola,%20quiero%20info%20y%20precio%20del%20Cargador%20Ultra%20Rápido" target="_blank" class="w-full block text-center bg-white/10 hover:bg-tech-cyan hover:text-tech-dark py-2 rounded-lg font-semibold transition-colors duration-300">
-                                Consultar Precio
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Producto 4 -->
-                    <article class="gsap-fade-up bg-tech-dark rounded-2xl overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-neon transition-all duration-300" style="transition-delay: 300ms;">
-                        <img src="https://images.unsplash.com/photo-1625842268584-8f3296236761?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Smartwatch" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold mb-1">Smartwatch Fit Pro</h3>
-                            <p class="text-gray-400 text-sm mb-4">Notificaciones, ritmo cardíaco y más.</p>
-                            <a href="https://wa.me/5491100000000?text=Hola,%20quiero%20info%20y%20precio%20del%20Smartwatch" target="_blank" class="w-full block text-center bg-white/10 hover:bg-tech-cyan hover:text-tech-dark py-2 rounded-lg font-semibold transition-colors duration-300">
-                                Consultar Precio
-                            </a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. POR QUÉ ELEGIRNOS -->
-        <section class="py-24 bg-tech-dark">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div class="gsap-fade-right">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">No somos una tienda más, <br><span class="text-tech-cyan">somos tu aliado tech</span></h2>
-                        <p class="text-gray-400 mb-8 text-lg">En Electro Tech entendemos lo frustrante que es comprar tecnología y que falle al poco tiempo. Por eso probamos cada producto antes de venderlo.</p>
-                        
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-4 bg-tech-card p-4 rounded-xl border border-white/5">
-                                <i class="fa-solid fa-circle-check text-tech-cyan text-xl"></i>
-                                <span class="font-medium">Cambio directo por fallas de fábrica.</span>
-                            </li>
-                            <li class="flex items-center gap-4 bg-tech-card p-4 rounded-xl border border-white/5">
-                                <i class="fa-solid fa-circle-check text-tech-cyan text-xl"></i>
-                                <span class="font-medium">Asesoramiento post-venta real.</span>
-                            </li>
-                            <li class="flex items-center gap-4 bg-tech-card p-4 rounded-xl border border-white/5">
-                                <i class="fa-solid fa-circle-check text-tech-cyan text-xl"></i>
-                                <span class="font-medium">Stock actualizado permanentemente.</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="gsap-fade-left relative">
-                        <!-- Abstract Tech Shape / Image -->
-                        <div class="aspect-square rounded-3xl overflow-hidden relative border border-white/10 shadow-neon">
-                            <img src="https://images.unsplash.com/photo-1550009158-9ebf6d1733dea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tecnología abstracta" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-t from-tech-dark via-transparent to-transparent"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. TESTIMONIOS (Social Proof) -->
-        <section class="py-24 bg-tech-card border-y border-white/5">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 gsap-fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que dicen en <span class="text-tech-blue">Florencio Varela</span></h2>
-                    <p class="text-gray-400">La confianza de nuestros clientes es nuestra mejor publicidad.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Testimonio 1 -->
-                    <div class="gsap-fade-up bg-tech-dark p-8 rounded-2xl border border-white/5 relative">
-                        <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-tech-blue/20"></i>
-                        <div class="flex text-yellow-400 mb-4">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 italic mb-6">"Compré unos auriculares para entrenar y me salieron buenísimos. La atención por WhatsApp fue de 10, súper amables y rápidos."</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-tech-blue/20 rounded-full flex items-center justify-center font-bold text-tech-cyan">M</div>
-                            <div>
-                                <p class="font-bold text-sm">Martín G.</p>
-                                <p class="text-xs text-gray-500">Cliente Verificado</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonio 2 -->
-                    <div class="gsap-fade-up bg-tech-dark p-8 rounded-2xl border border-white/5 relative" style="transition-delay: 100ms;">
-                        <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-tech-blue/20"></i>
-                        <div class="flex text-yellow-400 mb-4">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 italic mb-6">"Buscaba un cargador original porque los truchos me arruinaban la batería. Encontré a Electro Tech y me solucionaron el problema en el día."</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-tech-blue/20 rounded-full flex items-center justify-center font-bold text-tech-cyan">L</div>
-                            <div>
-                                <p class="font-bold text-sm">Laura S.</p>
-                                <p class="text-xs text-gray-500">Cliente Verificado</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonio 3 -->
-                    <div class="gsap-fade-up bg-tech-dark p-8 rounded-2xl border border-white/5 relative" style="transition-delay: 200ms;">
-                        <i class="fa-solid fa-quote-right absolute top-6 right-6 text-4xl text-tech-blue/20"></i>
-                        <div class="flex text-yellow-400 mb-4">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                        <p class="text-gray-300 italic mb-6">"Muy buenos precios comparado con locales del centro. Les escribí, coordinamos y pasé a retirar súper fácil. Recomendados."</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-tech-blue/20 rounded-full flex items-center justify-center font-bold text-tech-cyan">D</div>
-                            <div>
-                                <p class="font-bold text-sm">Diego F.</p>
-                                <p class="text-xs text-gray-500">Cliente Verificado</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. IA SEO / FAQ (Preguntas Frecuentes Semánticas) -->
-        <section class="py-20 bg-tech-dark">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 gsap-fade-up">
-                <h2 class="text-2xl font-bold mb-8 text-center">Dudas Frecuentes (FAQ)</h2>
-                <div class="space-y-4">
-                    <!-- Pregunta 1 -->
-                    <details class="bg-tech-card border border-white/5 rounded-lg overflow-hidden group cursor-pointer">
-                        <summary class="px-6 py-4 font-semibold flex justify-between items-center group-open:text-tech-cyan transition-colors">
-                            ¿Hacen envíos en Florencio Varela?
-                            <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180"></i>
-                        </summary>
-                        <div class="px-6 pb-4 text-gray-400 text-sm">
-                            Sí, realizamos entregas rápidas en todo Florencio Varela y zonas aledañas de Zona Sur. Consultanos por WhatsApp con tu ubicación para confirmarte el costo o si es envío gratis.
-                        </div>
-                    </details>
-                    <!-- Pregunta 2 -->
-                    <details class="bg-tech-card border border-white/5 rounded-lg overflow-hidden group cursor-pointer">
-                        <summary class="px-6 py-4 font-semibold flex justify-between items-center group-open:text-tech-cyan transition-colors">
-                            ¿Los productos tienen garantía?
-                            <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180"></i>
-                        </summary>
-                        <div class="px-6 pb-4 text-gray-400 text-sm">
-                            Absolutamente. Todos nuestros artículos (auriculares, parlantes, cargadores) cuentan con garantía por fallas de fábrica. Si algo no funciona correctamente, te lo cambiamos.
-                        </div>
-                    </details>
-                    <!-- Pregunta 3 -->
-                    <details class="bg-tech-card border border-white/5 rounded-lg overflow-hidden group cursor-pointer">
-                        <summary class="px-6 py-4 font-semibold flex justify-between items-center group-open:text-tech-cyan transition-colors">
-                            ¿Cuáles son los métodos de pago?
-                            <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180"></i>
-                        </summary>
-                        <div class="px-6 pb-4 text-gray-400 text-sm">
-                            Aceptamos efectivo, transferencias bancarias (MercadoPago, Cuenta DNI) y tarjetas. Consultá por promociones vigentes al momento de hacer tu pedido.
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. UBICACIÓN -->
-        <section class="py-20 bg-gradient-tech border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center gsap-fade-up">
-                <i class="fa-solid fa-map-location-dot text-4xl text-tech-cyan mb-4"></i>
-                <h2 class="text-3xl font-bold mb-4">Estamos en Florencio Varela</h2>
-                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Venta online con punto de entrega y envíos en toda la zona sur de Buenos Aires. ¡Escribinos para coordinar!</p>
-                <!-- Placeholder de mapa (Se puede cambiar por un iframe real de Google Maps) -->
-                <div class="w-full max-w-4xl mx-auto h-64 bg-tech-dark border border-white/10 rounded-2xl flex items-center justify-center text-gray-500 overflow-hidden relative">
-                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                    <p class="relative z-10 flex flex-col items-center gap-2">
-                        <i class="fa-solid fa-location-crosshairs text-2xl text-tech-blue"></i>
-                        Centro de Florencio Varela, GBA Sur
+    <!-- 1. Hero Section -->
+    <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+        <!-- Fondo decorativo suave -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-pink opacity-50 blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Copy Hero -->
+                <div class="gsap-hero-text text-center lg:text-left">
+                    <span class="text-brand-rose font-medium tracking-wider uppercase text-sm mb-4 block">Iluminación natural para tu cabello</span>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                        Transformá tu cabello, <br><span class="text-brand-rose italic">renová tu energía.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed">
+                        Soy Meli Figarola, colorista y peluquera profesional. Diseñamos juntas el look perfecto que resalte tus facciones y refleje tu verdadera esencia, cuidando siempre la salud de tu pelo.
                     </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full font-medium hover:bg-brand-rose transition-all shadow-lg flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                            <i class="fab fa-whatsapp text-xl"></i> Consultar por WhatsApp
+                        </a>
+                        <a href="#servicios" class="border border-brand-dark text-brand-dark px-8 py-4 rounded-full font-medium hover:bg-brand-pink transition-all flex items-center justify-center">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagen Hero -->
+                <div class="gsap-hero-img relative">
+                    <div class="absolute inset-0 bg-brand-rose rounded-t-full rounded-b-xl transform rotate-3 scale-105 opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Mujer rubia feliz mostrando su balayage en la peluquería" class="relative rounded-t-full rounded-b-xl object-cover w-full h-[500px] md:h-[600px] shadow-2xl">
+                    
+                    <!-- Tarjeta flotante de confianza -->
+                    <div class="absolute bottom-10 -left-6 md:-left-10 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 gsap-hero-badge">
+                        <div class="bg-green-100 p-3 rounded-full text-green-600">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Efecto Natural</p>
+                            <p class="text-xs text-gray-500">Bajo mantenimiento</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 8. CTA FINAL FUERTE -->
-        <section class="py-24 relative overflow-hidden">
-            <div class="absolute inset-0 bg-tech-blue/10 blur-3xl -z-10"></div>
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center gsap-fade-up">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-6">¿Listo para llevar tu tecnología al <span class="text-gradient">siguiente nivel</span>?</h2>
-                <p class="text-xl text-gray-300 mb-10">No des más vueltas. Mandanos un WhatsApp, decinos qué buscás y te lo preparamos.</p>
-                <a href="https://wa.me/5491100000000?text=Hola%20Electro%20Tech!%20Quiero%20comprar." target="_blank" 
-                   class="inline-flex items-center justify-center px-10 py-5 text-lg font-bold rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-105 transition-all duration-300">
-                    <i class="fa-brands fa-whatsapp mr-3 text-2xl"></i> Hablar con un Asesor
+    <!-- 2. Prueba Social / Confianza (Cinta) -->
+    <section class="bg-brand-dark text-brand-pink py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-brand-rose/30">
+                <div class="gsap-reveal flex flex-col items-center p-4">
+                    <i class="fas fa-heart text-3xl mb-3 text-brand-rose"></i>
+                    <h3 class="font-serif text-xl font-bold mb-1">Trato Humano</h3>
+                    <p class="text-sm font-light opacity-80">Te escuchamos para lograr lo que realmente querés.</p>
+                </div>
+                <div class="gsap-reveal flex flex-col items-center p-4">
+                    <i class="fas fa-magic text-3xl mb-3 text-brand-rose"></i>
+                    <h3 class="font-serif text-xl font-bold mb-1">Productos Premium</h3>
+                    <p class="text-sm font-light opacity-80">Cuidamos la estructura y salud de tu cabello.</p>
+                </div>
+                <div class="gsap-reveal flex flex-col items-center p-4">
+                    <i class="fas fa-spa text-3xl mb-3 text-brand-rose"></i>
+                    <h3 class="font-serif text-xl font-bold mb-1">Ambiente Cálido</h3>
+                    <p class="text-sm font-light opacity-80">Un espacio para relajarte y dedicarte tiempo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Servicios -->
+    <section id="servicios" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 gsap-reveal">
+                <span class="text-brand-rose font-medium tracking-wider uppercase text-sm mb-2 block">Lo que hacemos</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark">Nuestros Servicios</h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Técnicas modernas y personalizadas para que tu cabello luzca con movimiento, dimensión y brillo espectacular.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="gsap-service-card bg-[#FAFAFA] rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="bg-brand-pink w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-paint-brush text-brand-rose text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Balayage Profesional</h3>
+                    <p class="text-gray-600 text-sm mb-4">Degradado suave sin líneas marcadas. Raíz más oscura y puntas claras para una iluminación natural como tocada por el sol. Bajo mantenimiento.</p>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="gsap-service-card bg-[#FAFAFA] rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="bg-brand-pink w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-palette text-brand-rose text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Coloración</h3>
+                    <p class="text-gray-600 text-sm mb-4">Diseño de color adaptado a tus facciones. Cubrimiento de canas, corrección de color y tonos vibrantes que cuidan la fibra capilar.</p>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="gsap-service-card bg-[#FAFAFA] rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="bg-brand-pink w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-wind text-brand-rose text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Alisados</h3>
+                    <p class="text-gray-600 text-sm mb-4">Chau frizz. Tratamientos de alisado y nutrición profunda para un cabello lacio, sedoso y manejable todos los días.</p>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="gsap-service-card bg-[#FAFAFA] rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="bg-brand-pink w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cut text-brand-rose text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Corte de Diseño</h3>
+                    <p class="text-gray-600 text-sm mb-4">Cortes en tendencia que aportan movimiento. Evaluamos la forma de tu rostro y tipo de cabello para encontrar tu estilo ideal.</p>
+                </div>
+                <!-- Servicio 5 -->
+                <div class="gsap-service-card bg-[#FAFAFA] rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="bg-brand-pink w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-spray-can text-brand-rose text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Peinados</h3>
+                    <p class="text-gray-600 text-sm mb-4">Para eventos, fiestas o salidas especiales. Ondas al agua, recogidos elegantes o estilos descontracturados de larga duración.</p>
+                </div>
+                <!-- Servicio 6 -->
+                <div class="gsap-service-card bg-[#FAFAFA] rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                    <div class="bg-brand-pink w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-eye text-brand-rose text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Maquillaje</h3>
+                    <p class="text-gray-600 text-sm mb-4">Resaltamos tu belleza natural con productos de alta calidad. Desde looks sutiles de día hasta maquillaje glam para la noche o eventos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Portfolio / Galería (Estilo Instagram) -->
+    <section id="portfolio" class="py-24 bg-brand-pink/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gsap-reveal">
+                <div>
+                    <span class="text-brand-rose font-medium tracking-wider uppercase text-sm mb-2 block">Nuestro Trabajo</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark">Resultados Reales</h2>
+                </div>
+                <a href="https://wa.me/5493454026404?text=Hola!%20Me%20encantaron%20las%20fotos,%20quiero%20un%20cambio%20así%20%F0%9F%98%8D" target="_blank" class="hidden md:inline-flex text-brand-dark font-medium border-b border-brand-dark hover:text-brand-rose hover:border-brand-rose transition-colors pb-1">
+                    Quiero este cambio <i class="fas fa-arrow-right ml-2 mt-1"></i>
                 </a>
             </div>
-        </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-tech-dark border-t border-white/10 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <!-- Marca -->
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-microchip text-tech-cyan text-2xl"></i>
-                    <span class="font-bold text-xl tracking-wider text-gray-300">ELECTRO<span class="text-white">TECH</span></span>
+            <!-- Grid de imágenes (Reemplazar src con las fotos de tu collage) -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
+                <div class="gallery-img overflow-hidden rounded-xl aspect-[4/5] relative gsap-gallery cursor-pointer group">
+                    <div class="absolute inset-0 bg-black/40 z-10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Balayage rubio natural" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
                 </div>
-                
-                <!-- Redes -->
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-tech-cyan hover:shadow-neon transition-all duration-300">
-                        <i class="fa-brands fa-instagram text-xl"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-tech-blue transition-all duration-300">
-                        <i class="fa-brands fa-facebook-f text-xl"></i>
-                    </a>
+                <div class="gallery-img overflow-hidden rounded-xl aspect-[4/5] relative gsap-gallery cursor-pointer group">
+                    <div class="absolute inset-0 bg-black/40 z-10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Alisado perfecto" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-xl aspect-[4/5] relative gsap-gallery cursor-pointer group">
+                    <div class="absolute inset-0 bg-black/40 z-10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Morena iluminada" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-xl aspect-[4/5] relative gsap-gallery cursor-pointer group hidden md:block">
+                    <div class="absolute inset-0 bg-black/40 z-10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maquillaje social y peinado" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
                 </div>
             </div>
             
-            <div class="mt-8 pt-8 border-t border-white/5 text-center text-sm text-gray-500">
-                <p>&copy; <span id="year"></span> Electro Tech Florencio Varela. Todos los derechos reservados.</p>
+            <div class="mt-8 text-center md:hidden">
+                 <a href="https://wa.me/5493454026404" target="_blank" class="text-brand-dark font-medium border-b border-brand-dark">Quiero un cambio así</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Sobre Meli / Experiencia -->
+    <section id="sobre-meli" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Imagen -->
+                <div class="w-full lg:w-1/2 relative gsap-reveal">
+                    <!-- Decoración fondo -->
+                    <div class="absolute -inset-4 bg-brand-pink rounded-3xl transform -rotate-3 z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Meli Figarola trabajando en la peluquería" class="relative z-10 w-full rounded-2xl shadow-xl object-cover h-[500px]" loading="lazy">
+                </div>
+                
+                <!-- Texto -->
+                <div class="w-full lg:w-1/2 gsap-reveal">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Tu momento, tu espacio.</h2>
+                    <p class="text-gray-600 mb-6 text-lg font-light leading-relaxed">
+                        Entendemos que ir a la peluquería no es solo cortarse el pelo; es dedicarte un momento para vos. En <strong>Meli Figarola Peluquería</strong>, mi prioridad es que te sientas escuchada y cómoda desde el primer minuto.
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg font-light leading-relaxed">
+                        Evaluamos juntas el color base, tu corte actual y tus facciones para diseñar un look totalmente <strong>personalizado</strong>. Mi mayor recompensa es esa sonrisa al mirarte al espejo y ver tu energía renovada.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-brand-rose"></i>
+                            <span class="text-gray-700">Asesoramiento de imagen honesto y real.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-brand-rose"></i>
+                            <span class="text-gray-700">Técnicas que protegen la salud de tu fibra capilar.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-brand-rose"></i>
+                            <span class="text-gray-700">Acompañamiento en el mantenimiento en casa.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7 & 8. CTA Final + Formulario Simple -->
+    <section class="bg-brand-dark py-24 relative overflow-hidden">
+        <!-- Decoración abstracta -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-rose rounded-full opacity-10 blur-3xl -z-0"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-white rounded-full opacity-5 blur-3xl -z-0"></div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row gap-12 items-center gsap-reveal">
+                
+                <!-- CTA Text -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-4">¿Lista para tu cambio?</h2>
+                    <p class="text-gray-600 mb-8 text-lg">Escribinos directo por WhatsApp, es la forma más rápida de asesorarte, contarte sobre presupuestos y buscar un turno que te quede cómodo.</p>
+                    
+                    <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-colors shadow-lg transform hover:scale-105 duration-300">
+                        <i class="fab fa-whatsapp text-2xl"></i> Enviar WhatsApp ahora
+                    </a>
+                    <p class="text-xs text-gray-400 mt-4">Respondemos rápido en horario comercial.</p>
+                </div>
+
+                <!-- Formulario Secundario -->
+                <div class="w-full lg:w-1/2 bg-[#FAFAFA] p-8 rounded-2xl border border-gray-100">
+                    <h3 class="font-serif text-2xl font-bold mb-6 text-center">O dejanos tus datos</h3>
+                    <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('En un entorno real, esto enviaría un email. Recomendamos usar WhatsApp para contacto inmediato.');">
+                        <div>
+                            <input type="text" placeholder="Tu Nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Tu Teléfono" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white">
+                        </div>
+                        <div>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white text-gray-600">
+                                <option value="" disabled selected>¿Qué servicio te interesa?</option>
+                                <option value="balayage">Balayage / Iluminación</option>
+                                <option value="color">Coloración</option>
+                                <option value="alisado">Alisado / Tratamiento</option>
+                                <option value="corte">Corte y Peinado</option>
+                                <option value="maquillaje">Maquillaje</option>
+                                <option value="otro">Asesoramiento / Otro</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-dark text-white font-medium py-3 rounded-lg hover:bg-brand-rose transition-colors">
+                            Solicitar Contacto
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer SEO y Contacto -->
+    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                <!-- Marca -->
+                <div>
+                    <h4 class="font-serif font-bold text-2xl tracking-widest text-brand-dark mb-4">MELI FIGAROLA</h4>
+                    <p class="text-gray-500 text-sm mb-6">Peluquería profesional. Transformamos tu imagen cuidando la esencia de tu cabello con técnicas de vanguardia.</p>
+                    <div class="flex space-x-4">
+                        <!-- Redes Sociales -->
+                        <a href="#" class="w-10 h-10 bg-brand-pink text-brand-rose flex items-center justify-center rounded-full hover:bg-brand-rose hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-brand-pink text-brand-rose flex items-center justify-center rounded-full hover:bg-brand-rose hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-brand-pink text-brand-rose flex items-center justify-center rounded-full hover:bg-brand-rose hover:text-white transition-colors">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contacto -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-4">Contacto</h4>
+                    <ul class="space-y-3 text-gray-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fab fa-whatsapp text-brand-rose mt-1"></i>
+                            <a href="https://wa.me/5493454026404" target="_blank" class="hover:text-brand-rose transition-colors">+54 9 3454 02-6404</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-brand-rose mt-1"></i>
+                            <span>Argentina (Atención con turno previo)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Enlaces -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-4">Servicios Rápidos</h4>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Especialistas en Balayage</a></li>
+                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Alisados y Tratamientos</a></li>
+                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Colorimetría Capilar</a></li>
+                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Maquillaje Profesional</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SEO Text local para motores de búsqueda -->
+            <div class="border-t border-gray-100 pt-8 mt-8">
+                <p class="text-xs text-gray-400 text-center md:text-left leading-relaxed">
+                    <strong>Meli Figarola Peluquería</strong> es un salón de belleza y estilismo ubicado en Argentina. Ofrecemos servicios profesionales de peluquería, destacándonos como especialistas en técnicas de coloración como balayage, mechas, babylights y cubrimiento de canas. Realizamos cortes de cabello de tendencia, alisados definitivos, nutrición capilar, peinados para eventos y maquillaje profesional. Trabajamos con productos de primera calidad para garantizar resultados naturales, un degradado suave, y un cabello con movimiento y luz. Agenda tu turno por WhatsApp.
+                </p>
+                <p class="text-xs text-gray-400 text-center mt-6">
+                    &copy; 2024 Meli Figarola Peluquería. Todos los derechos reservados.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE WHATSAPP -->
-    <a href="https://wa.me/5491100000000?text=Hola!%20Vengo%20de%20la%20landing%20page%20y%20tengo%20una%20consulta." 
-       target="_blank" 
-       class="btn-whatsapp-float fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform duration-300"
-       aria-label="Contactar por WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <!-- Botón Flotante de WhatsApp (CRO Focus) -->
+    <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:bg-[#20bd5a] hover:-translate-y-1 transition-all duration-300 wpp-pulse">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPTS -->
-    <!-- GSAP & ScrollTrigger -->
+    <!-- GSAP Scripts para Animaciones -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Lenis (Smooth Scroll) -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-
+    
     <script>
-        // Actualizar Año Footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // 1. Inicializar Lenis (Smooth Scroll Moderno)
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
-            direction: 'vertical',
-            gestureDirection: 'vertical',
-            smooth: true,
-            mouseMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
-            infinite: false,
-        });
-
-        // Conectar Lenis con GSAP
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add((time) => { lenis.raf(time * 1000) });
-        gsap.ticker.lagSmoothing(0);
-
-        // 2. Animaciones GSAP
+        // Registrar ScrollTrigger
         gsap.registerPlugin(ScrollTrigger);
 
         // Animación de entrada Hero
-        gsap.from(".gsap-hero", {
-            y: 50,
+        let tlHero = gsap.timeline();
+        tlHero.from(".gsap-hero-text > *", {
+            y: 30,
             opacity: 0,
-            duration: 1,
-            stagger: 0.2,
+            duration: 0.8,
+            stagger: 0.15,
             ease: "power3.out",
             delay: 0.2
-        });
+        })
+        .from(".gsap-hero-img img", {
+            x: 30,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out"
+        }, "-=0.6")
+        .from(".gsap-hero-badge", {
+            y: 20,
+            opacity: 0,
+            duration: 0.6,
+            ease: "back.out(1.7)"
+        }, "-=0.4");
 
-        // Animación Fade Up general
-        gsap.utils.toArray('.gsap-fade-up').forEach(element => {
-            gsap.from(element, {
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top 85%", // Se activa cuando el top del elemento alcanza el 85% del viewport
-                    toggleActions: "play none none reverse"
-                },
-                y: 40,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power2.out"
-            });
-        });
-
-        // Animaciones laterales
-        gsap.from(".gsap-fade-right", {
-            scrollTrigger: { trigger: ".gsap-fade-right", start: "top 80%" },
-            x: -50, opacity: 0, duration: 1, ease: "power2.out"
-        });
-        
-        gsap.from(".gsap-fade-left", {
-            scrollTrigger: { trigger: ".gsap-fade-left", start: "top 80%" },
-            x: 50, opacity: 0, duration: 1, ease: "power2.out"
-        });
-
-        // 3. Lógica simple para Accordion (FAQ) - Cerrar los demás al abrir uno
-        const details = document.querySelectorAll("details");
-        details.forEach((targetDetail) => {
-            targetDetail.addEventListener("click", () => {
-                details.forEach((detail) => {
-                    if (detail !== targetDetail) {
-                        detail.removeAttribute("open");
+        // Animación Reveal general al hacer scroll
+        gsap.utils.toArray('.gsap-reveal').forEach(element => {
+            gsap.fromTo(element, 
+                { autoAlpha: 0, y: 40 }, 
+                {
+                    duration: 0.8, 
+                    autoAlpha: 1, 
+                    y: 0, 
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%", // Anima cuando el elemento llega al 85% de la pantalla
+                        toggleActions: "play none none reverse"
                     }
-                });
-            });
+                }
+            );
+        });
+
+        // Animación staggered para Cards de Servicios
+        gsap.from(".gsap-service-card", {
+            scrollTrigger: {
+                trigger: "#servicios",
+                start: "top 75%"
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power2.out"
+        });
+
+        // Animación staggered para Galería
+        gsap.from(".gsap-gallery", {
+            scrollTrigger: {
+                trigger: "#portfolio",
+                start: "top 75%"
+            },
+            scale: 0.9,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "back.out(1.2)"
         });
     </script>
 </body>
