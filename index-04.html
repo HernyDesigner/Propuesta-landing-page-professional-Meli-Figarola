@@ -6,7 +6,6 @@
     
     <!-- SEO Básico -->
     <title>Meli Figarola Peluquería | Especialista en Balayage y Color en Argentina</title>
-    <link rel="icon" href="/assets/img/logos/favicon.svg" type="image/svg+xml">
     <meta name="description" content="Transformá tu cabello y renová tu energía. Meli Figarola es tu peluquería de confianza. Especialistas en balayage, coloración, alisados y maquillaje profesional. Reservá tu turno.">
     <meta name="keywords" content="peluquería en argentina, balayage profesional, alisado, colorista, peluquera profesional, corte de pelo, maquillaje, diseño de color">
     <meta name="author" content="Meli Figarola">
@@ -53,10 +52,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Lenis CSS -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
-    <!-- Style CSS -->
-    <link rel="stylesheet" src="assets/css/style.css">
 
+    <style>
+        .gsap-reveal { visibility: hidden; }
+        
+        /* WhatsApp Pulse */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wpp-pulse { animation: pulse-ring 2s infinite; }
 
+        /* Instagram Pulse */
+        @keyframes pulse-ring-ig {
+            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(220, 39, 67, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(220, 39, 67, 0); }
+            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(220, 39, 67, 0); }
+        }
+        .ig-pulse { animation: pulse-ring-ig 2s infinite; }
+
+        .gallery-img:hover img { transform: scale(1.05); }
+
+        /* Lenis Fixes para asegurar el scroll */
+        html.lenis, html.lenis body { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth[data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        .lenis.lenis-scrolling iframe { pointer-events: none; }
+    </style>
 
 </head>
 <body class="font-sans text-brand-dark bg-[#FAFAFA] overflow-x-hidden">
@@ -420,31 +444,27 @@
                 </div>
 
                 <div class="w-full lg:w-1/2 bg-[#FAFAFA] p-8 rounded-2xl border border-gray-100">
-                    <h3 class="font-serif text-2xl font-bold mb-6 text-center">Cómo llegar</h3>
-                    
-                    <!-- Mapa embebido genérico de la zona -->
-                    <div class="w-full h-64 rounded-xl overflow-hidden mb-6 shadow-inner border border-gray-200">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=Barrio+Gobernador+Cresto,+Concordia,+Entre+Rios&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                    
-                    <!-- Textos informativos -->
-                    <div class="text-center">
-                        <p class="text-gray-700 font-medium mb-2 flex items-center justify-center gap-2">
-                            <i class="fas fa-map-marker-alt text-brand-rose text-lg"></i> 
-                            Atendemos en la zona del Barrio Gobernador Cresto
-                        </p>
-                        <p class="text-gray-500 text-sm bg-white inline-block px-4 py-2 rounded-full border border-gray-100 shadow-sm">
-                            La dirección exacta se envía al confirmar el turno.
-                        </p>
-                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-6 text-center">O dejanos tus datos</h3>
+                    <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('Usa WhatsApp para contacto inmediato.');">
+                        <div>
+                            <input type="text" placeholder="Tu Nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Tu Teléfono" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white">
+                        </div>
+                        <div>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white text-gray-600">
+                                <option value="" disabled selected>¿Qué servicio te interesa?</option>
+                                <option value="balayage">Balayage / Iluminación</option>
+                                <option value="color">Coloración</option>
+                                <option value="alisado">Alisado / Tratamiento</option>
+                                <option value="corte">Corte y Peinado</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-dark text-white font-medium py-3 rounded-lg hover:bg-brand-rose transition-colors">
+                            Solicitar Contacto
+                        </button>
+                    </form>
                 </div>
 
             </div>
@@ -454,7 +474,7 @@
     <!-- Footer -->
     <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
                 <div>
                     <h4 class="font-serif font-bold text-2xl tracking-widest text-brand-dark mb-4">MELI FIGAROLA</h4>
                     <p class="text-gray-500 text-sm mb-6">Peluquería profesional. Transformamos tu imagen cuidando la esencia de tu cabello.</p>
@@ -468,30 +488,16 @@
                         </li>
                     </ul>
                 </div>
-                <div class="md:col-span-2">
+                <div>
                     <h4 class="font-serif font-bold text-lg mb-4">Servicios</h4>
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-gray-600 text-sm">
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Balayage Profesional</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Coloración</a></li>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Balayage</a></li>
                         <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Alisados</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Corte de Diseño</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Peinados</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Maquillaje</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Perfilado de cejas</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Laminado de cejas</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Lifting de pestañas</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Spa de pies completo</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Manicuría</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Presoterapia</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Maderoterapia</a></li>
-                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Depilación Láser definitiva</a></li>
+                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Colorimetría</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <p class="text-xs text-gray-400 text-center mt-6 border-t border-black/10 pt-5">
-            &copy; 2026 Meli Figarola Peluquería. Todos los derechos reservados. | Desarrollo Web por <a href="https://www.hernysgodoy.com/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-rose transition-colors font-medium">hernysgodoy.com</a>
-        </p>
     </footer>
 
     <!-- Instagram Flotante (Izquierda) -->
@@ -511,7 +517,93 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Lenis JS (Para el Smooth Scroll) -->
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-    <!-- Script -->
-    <script src="assets/js/script.js"></script>
+    
+    <script>
+        // Esperar a que el DOM esté completamente cargado para evitar errores
+        document.addEventListener("DOMContentLoaded", (event) => {
+            
+            // 1. Inicializar Lenis (Smooth Scroll)
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smoothWheel: true
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            // Sincronizar Lenis con ScrollTrigger de GSAP
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0, 0);
+
+            // 2. Inicializar Swiper (Slider Hero con Cross-fade)
+            const heroSwiper = new Swiper('.hero-swiper', {
+                effect: 'fade',
+                fadeEffect: { crossFade: true },
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                speed: 1200, // Transición suave
+            });
+
+            // 3. Animaciones GSAP
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero
+            let tlHero = gsap.timeline();
+            tlHero.from(".gsap-hero-text > *", { y: 30, opacity: 0, duration: 0.8, stagger: 0.15, ease: "power3.out", delay: 0.2 })
+                  .from(".hero-swiper", { x: 30, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.6")
+                  .from(".gsap-hero-badge", { y: 20, opacity: 0, duration: 0.6, ease: "back.out(1.7)" }, "-=0.4");
+
+            // Reveal standard
+            gsap.utils.toArray('.gsap-reveal').forEach(element => {
+                gsap.fromTo(element, 
+                    { autoAlpha: 0, y: 40 }, 
+                    {
+                        duration: 0.8, autoAlpha: 1, y: 0, ease: "power3.out",
+                        scrollTrigger: { trigger: element, start: "top 85%", toggleActions: "play none none reverse" }
+                    }
+                );
+            });
+
+            // Animación individual para cada Card de Servicio
+            gsap.utils.toArray('.gsap-service-card').forEach(card => {
+                gsap.fromTo(card, 
+                    { opacity: 0, y: 30 }, 
+                    {
+                        duration: 0.6, opacity: 1, y: 0, ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+
+            // Animación individual para Galería
+            gsap.utils.toArray('.gsap-gallery').forEach(img => {
+                gsap.fromTo(img, 
+                    { scale: 0.9, opacity: 0 }, 
+                    {
+                        duration: 0.6, scale: 1, opacity: 1, ease: "back.out(1.2)",
+                        scrollTrigger: {
+                            trigger: img,
+                            start: "top 90%",
+                            toggleActions: "play none none reverse"
+                        }
+                    }
+                );
+            });
+        });
+    </script>
 </body>
 </html>
