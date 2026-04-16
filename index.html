@@ -444,27 +444,31 @@
                 </div>
 
                 <div class="w-full lg:w-1/2 bg-[#FAFAFA] p-8 rounded-2xl border border-gray-100">
-                    <h3 class="font-serif text-2xl font-bold mb-6 text-center">O dejanos tus datos</h3>
-                    <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('Usa WhatsApp para contacto inmediato.');">
-                        <div>
-                            <input type="text" placeholder="Tu Nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white">
-                        </div>
-                        <div>
-                            <input type="tel" placeholder="Tu Teléfono" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white">
-                        </div>
-                        <div>
-                            <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-rose bg-white text-gray-600">
-                                <option value="" disabled selected>¿Qué servicio te interesa?</option>
-                                <option value="balayage">Balayage / Iluminación</option>
-                                <option value="color">Coloración</option>
-                                <option value="alisado">Alisado / Tratamiento</option>
-                                <option value="corte">Corte y Peinado</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="w-full bg-brand-dark text-white font-medium py-3 rounded-lg hover:bg-brand-rose transition-colors">
-                            Solicitar Contacto
-                        </button>
-                    </form>
+                    <h3 class="font-serif text-2xl font-bold mb-6 text-center">Cómo llegar</h3>
+                    
+                    <!-- Mapa embebido genérico de la zona -->
+                    <div class="w-full h-64 rounded-xl overflow-hidden mb-6 shadow-inner border border-gray-200">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Barrio+Gobernador+Cresto,+Concordia,+Entre+Rios&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Textos informativos -->
+                    <div class="text-center">
+                        <p class="text-gray-700 font-medium mb-2 flex items-center justify-center gap-2">
+                            <i class="fas fa-map-marker-alt text-brand-rose text-lg"></i> 
+                            Atendemos en la zona del Barrio Gobernador Cresto
+                        </p>
+                        <p class="text-gray-500 text-sm bg-white inline-block px-4 py-2 rounded-full border border-gray-100 shadow-sm">
+                            La dirección exacta se envía al confirmar el turno.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -498,6 +502,9 @@
                 </div>
             </div>
         </div>
+        <p class="text-xs text-gray-400 text-center mt-6">
+            &copy; 2026 Meli Figarola Peluquería. Todos los derechos reservados. | Desarrollado por <a href="https://www.hernysgodoy.com/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-rose transition-colors font-medium">hernysgodoy.com</a>
+        </p>
     </footer>
 
     <!-- Instagram Flotante (Izquierda) -->
