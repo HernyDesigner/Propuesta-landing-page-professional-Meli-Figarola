@@ -85,9 +85,8 @@
         });
 
 
-<!-- ============================================================
-     JAVASCRIPT: Control del carrusel
-     ============================================================ -->
+
+     // Control del carrusel
 
 (function() {
   const nqCarouselController = {
