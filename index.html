@@ -56,486 +56,6 @@
     <!-- Style CSS -->
     <link rel="stylesheet" src="./assets/css/style.css">
 
-    <style>
-:root {
-  --nq-primary: #c94a75;
-  --nq-primary-light: #f7e0e8;
-  --nq-text-dark: #333;
-  --nq-text-light: #666;
-  --nq-text-muted: #999;
-  --nq-border: #e8d0d9;
-  --nq-white: #fff;
-  --nq-bg-light: #fdf8f9;
-}
-
-.nq-section {
-  padding: 80px 0;
-  background: var(--nq-bg-light);
-}
-
-.nq-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-/* ===== CONTENIDO (IZQUIERDA) ===== */
-.nq-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.nq-badge {
-  display: inline-block;
-  background: var(--nq-primary-light);
-  color: var(--nq-primary);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 5px 16px;
-  border-radius: 20px;
-  letter-spacing: 0.04em;
-  width: fit-content;
-  margin-bottom: 0.5rem;
-}
-
-.nq-heading {
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-  font-weight: 700;
-  margin: 0 0 1rem;
-  line-height: 1.3;
-  color: var(--nq-text-dark);
-}
-
-.nq-intro {
-  font-size: 1.05rem;
-  color: var(--nq-text-light);
-  line-height: 1.7;
-  margin: 0 0 2rem;
-}
-
-/* Diferenciales */
-.nq-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin-bottom: 2rem;
-}
-
-.nq-feature {
-  background: var(--nq-white);
-  border: 1px solid var(--nq-border);
-  border-radius: 12px;
-  padding: 1.25rem;
-  transition: all 0.3s ease;
-}
-
-.nq-feature:hover {
-  border-color: var(--nq-primary);
-  box-shadow: 0 4px 12px rgba(201, 74, 117, 0.08);
-}
-
-.nq-feature h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin: 0 0 6px;
-  color: var(--nq-primary);
-}
-
-.nq-feature p {
-  font-size: 0.875rem;
-  color: var(--nq-text-light);
-  margin: 0;
-  line-height: 1.55;
-}
-
-/* Combos */
-.nq-combos-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 1.5rem 0 0.4rem;
-  color: var(--nq-text-dark);
-}
-
-.nq-combos-subtitle {
-  color: var(--nq-text-light);
-  margin: 0 0 1.5rem;
-  font-size: 0.95rem;
-}
-
-.nq-combos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin-bottom: 2rem;
-}
-
-.nq-combo {
-  background: var(--nq-white);
-  border: 1px solid var(--nq-border);
-  border-radius: 14px;
-  padding: 1.25rem;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.nq-combo:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.nq-combo-featured {
-  border: 2px solid var(--nq-primary);
-}
-
-.nq-combo-badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--nq-primary);
-  color: var(--nq-white);
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 14px;
-  border-radius: 20px;
-  white-space: nowrap;
-}
-
-.nq-combo h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin: 0 0 14px;
-  color: var(--nq-text-dark);
-}
-
-.nq-combo ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nq-combo ul li {
-  font-size: 0.875rem;
-  color: var(--nq-text-light);
-  padding: 6px 0;
-  border-bottom: 1px solid var(--nq-primary-light);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.nq-combo ul li::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--nq-primary);
-  flex-shrink: 0;
-}
-
-.nq-combo ul li:last-child {
-  border-bottom: none;
-}
-
-/* FAQ */
-.nq-faq {
-  background: var(--nq-white);
-  border: 1px solid var(--nq-border);
-  border-radius: 14px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.nq-faq h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0 0 1rem;
-  color: var(--nq-text-dark);
-}
-
-.nq-faq h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin: 1rem 0 0.5rem;
-  color: var(--nq-text-dark);
-}
-
-.nq-faq p {
-  font-size: 0.875rem;
-  color: var(--nq-text-light);
-  line-height: 1.6;
-  margin: 0 0 1rem;
-}
-
-/* CTA */
-.nq-cta {
-  text-align: left;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, var(--nq-primary-light) 0%, #fdf5f8 100%);
-  border-radius: 14px;
-  margin-top: 1rem;
-}
-
-.nq-cta p {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 1rem;
-  color: var(--nq-text-dark);
-}
-
-.nq-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 28px;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.nq-btn-primary {
-  background: #25D366;
-  color: var(--nq-white);
-}
-
-.nq-btn-primary:hover {
-  background: #1eb858;
-  transform: scale(1.05);
-}
-
-.nq-cta small {
-  display: block;
-  margin-top: 0.75rem;
-  font-size: 0.8rem;
-  color: var(--nq-text-muted);
-}
-
-/* ===== CARRUSEL (DERECHA) ===== */
-.nq-carousel-wrapper {
-  position: sticky;
-  top: 100px;
-  height: fit-content;
-}
-
-.nq-carousel {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 3/4;
-  border-radius: 20px;
-  overflow: hidden;
-  background: var(--nq-white);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--nq-border);
-}
-
-.nq-carousel-slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.nq-carousel-slide.nq-carousel-active {
-  opacity: 1;
-  z-index: 10;
-}
-
-.nq-carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Botones de navegación */
-.nq-carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border: none;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--nq-primary);
-  font-size: 28px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  z-index: 20;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.nq-carousel-nav:hover {
-  background: var(--nq-white);
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.nq-carousel-nav-prev {
-  left: 16px;
-}
-
-.nq-carousel-nav-next {
-  right: 16px;
-}
-
-/* Indicadores (dots) */
-.nq-carousel-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 20;
-}
-
-.nq-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.nq-dot:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.nq-dot-active {
-  background: var(--nq-white);
-  width: 30px;
-  border-radius: 5px;
-}
-
-/* ===== RESPONSIVE ===== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .nq-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .nq-carousel-wrapper {
-    position: relative;
-    top: auto;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .nq-carousel {
-    aspect-ratio: 3/4;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .nq-section {
-    padding: 60px 0;
-  }
-
-  .nq-container {
-    gap: 30px;
-  }
-
-  .nq-heading {
-    font-size: 1.5rem;
-  }
-
-  .nq-intro {
-    font-size: 0.95rem;
-  }
-
-  .nq-features {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .nq-combos {
-    grid-template-columns: 1fr;
-  }
-
-  .nq-carousel {
-    aspect-ratio: 3/4;
-  }
-
-  .nq-carousel-nav {
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-  }
-
-  .nq-carousel-nav-prev {
-    left: 12px;
-  }
-
-  .nq-carousel-nav-next {
-    right: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nq-section {
-    padding: 40px 0;
-  }
-
-  .nq-container {
-    padding: 0 16px;
-    gap: 20px;
-  }
-
-  .nq-heading {
-    font-size: 1.35rem;
-  }
-
-  .nq-intro {
-    font-size: 0.9rem;
-  }
-
-  .nq-badge {
-    font-size: 12px;
-  }
-
-  .nq-feature h3,
-  .nq-combo h4 {
-    font-size: 0.9rem;
-  }
-
-  .nq-feature p,
-  .nq-combo ul li,
-  .nq-faq p {
-    font-size: 0.8rem;
-  }
-
-  .nq-btn {
-    width: 100%;
-  }
-
-  .nq-carousel {
-    aspect-ratio: 9/12;
-  }
-}
-</style>
 
     <!-- SCHEMA MARKUP -->
     <script type="application/ld+json">
@@ -767,87 +287,88 @@
         </div>
     </section>
 
-    <section id="novias-quinceaneras" class="nq-section">
-        <div class="nq-container">
+    <!-- 4. Novias y Quinceañeras -->
+    <section id="novias-quinceaneras" class="py-24 bg-brand-pink/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             
             <!-- LADO IZQUIERDO: Contenido -->
-            <div class="nq-content">
+            <div class="flex flex-col gap-6">
             
-            <span class="nq-badge">Novias &amp; Quinceañeras</span>
-            <h2 class="nq-heading">Tu look más especial, con el equipo que más te cuida</h2>
-            <p class="nq-intro">
+            <span class="inline-block bg-[#f7e0e8] text-[#c94a75] text-[13px] font-semibold px-4 py-1.5 rounded-full tracking-wide w-fit mb-2">Novias &amp; Quinceañeras</span>
+            <h2 class="text-[clamp(1.35rem,4vw,2.2rem)] font-bold mb-4 leading-snug text-[#333]">Tu look más especial, con el equipo que más te cuida</h2>
+            <p class="text-[0.9rem] sm:text-[1.05rem] text-gray-600 leading-relaxed mb-8">
                 Sabemos lo importante que es ese día. Contamos con un equipo profesional dedicado
                 exclusivamente a vos, con atención preferencial y personalizada, asesoría previa,
                 prueba incluida y acompañamiento en cada detalle para que llegues perfecta.
             </p>
 
             <!-- Diferenciales -->
-            <div class="nq-features">
-                <div class="nq-feature">
-                <h3>Equipo profesional</h3>
-                <p>Trabajamos coordinadas para que todo fluya sin apuros el día de tu evento.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-3 mb-8">
+                <div class="bg-white border border-[#e8d0d9] rounded-xl p-5 transition-all duration-300 hover:border-[#c94a75] hover:shadow-[0_4px_12px_rgba(201,74,117,0.08)]">
+                <h3 class="text-[0.9rem] sm:text-[0.95rem] font-bold mb-1.5 text-[#c94a75]">Equipo profesional</h3>
+                <p class="text-[0.8rem] sm:text-sm text-gray-600 leading-relaxed">Trabajamos coordinadas para que todo fluya sin apuros el día de tu evento.</p>
                 </div>
-                <div class="nq-feature">
-                <h3>Atención preferencial y personalizada</h3>
-                <p>Desde la primera consulta, tu look es nuestro único foco. Te escuchamos y diseñamos juntas.</p>
+                <div class="bg-white border border-[#e8d0d9] rounded-xl p-5 transition-all duration-300 hover:border-[#c94a75] hover:shadow-[0_4px_12px_rgba(201,74,117,0.08)]">
+                <h3 class="text-[0.9rem] sm:text-[0.95rem] font-bold mb-1.5 text-[#c94a75]">Atención preferencial y personalizada</h3>
+                <p class="text-[0.8rem] sm:text-sm text-gray-600 leading-relaxed">Desde la primera consulta, tu look es nuestro único foco. Te escuchamos y diseñamos juntas.</p>
                 </div>
-                <div class="nq-feature">
-                <h3>Asesoría y prueba</h3>
-                <p>Coordinamos un turno de prueba previo para definir peinado y maquillaje con tiempo y tranquilidad.</p>
+                <div class="bg-white border border-[#e8d0d9] rounded-xl p-5 transition-all duration-300 hover:border-[#c94a75] hover:shadow-[0_4px_12px_rgba(201,74,117,0.08)]">
+                <h3 class="text-[0.9rem] sm:text-[0.95rem] font-bold mb-1.5 text-[#c94a75]">Asesoría y prueba</h3>
+                <p class="text-[0.8rem] sm:text-sm text-gray-600 leading-relaxed">Coordinamos un turno de prueba previo para definir peinado y maquillaje con tiempo y tranquilidad.</p>
                 </div>
-                <div class="nq-feature">
-                <h3>Repuesto de retoque</h3>
-                <p>Te preparamos un kit de maquillaje personalizado para que puedas retocarte durante el evento.</p>
+                <div class="bg-white border border-[#e8d0d9] rounded-xl p-5 transition-all duration-300 hover:border-[#c94a75] hover:shadow-[0_4px_12px_rgba(201,74,117,0.08)]">
+                <h3 class="text-[0.9rem] sm:text-[0.95rem] font-bold mb-1.5 text-[#c94a75]">Repuesto de retoque</h3>
+                <p class="text-[0.8rem] sm:text-sm text-gray-600 leading-relaxed">Te preparamos un kit de maquillaje personalizado para que puedas retocarte durante el evento.</p>
                 </div>
-                <div class="nq-feature">
-                <h3>Ambiente cálido y contenedor</h3>
-                <p>Un espacio pensado para que disfrutes cada momento de la preparación sin estrés.</p>
+                <div class="bg-white border border-[#e8d0d9] rounded-xl p-5 transition-all duration-300 hover:border-[#c94a75] hover:shadow-[0_4px_12px_rgba(201,74,117,0.08)]">
+                <h3 class="text-[0.9rem] sm:text-[0.95rem] font-bold mb-1.5 text-[#c94a75]">Ambiente cálido y contenedor</h3>
+                <p class="text-[0.8rem] sm:text-sm text-gray-600 leading-relaxed">Un espacio pensado para que disfrutes cada momento de la preparación sin estrés.</p>
                 </div>
             </div>
 
             <!-- Combos -->
-            <h3 class="nq-combos-title">Nuestros combos</h3>
-            <p class="nq-combos-subtitle">Armamos paquetes a medida para que tengas todo resuelto en un solo lugar.</p>
+            <h3 class="text-[1.4rem] font-bold mt-6 mb-1.5 text-[#333]">Nuestros combos</h3>
+            <p class="text-gray-600 mb-6 text-[0.95rem]">Armamos paquetes a medida para que tengas todo resuelto en un solo lugar.</p>
 
-            <div class="nq-combos">
-                <div class="nq-combo">
-                <h4>Combo Esencial</h4>
-                <ul>
-                    <li>Peinado</li>
-                    <li>Maquillaje profesional</li>
+            <div class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-3 mb-8">
+                <div class="bg-white border border-[#e8d0d9] rounded-2xl p-5 relative transition-all duration-300 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:-translate-y-0.5">
+                <h4 class="text-[0.9rem] sm:text-base font-bold mb-3.5 text-[#333]">Combo Esencial</h4>
+                <ul class="list-none p-0 m-0">
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Peinado</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Maquillaje profesional</li>
                 </ul>
                 </div>
-                <div class="nq-combo nq-combo-featured">
-                <span class="nq-combo-badge">El más elegido</span>
-                <h4>Combo Completo</h4>
-                <ul>
-                    <li>Peinado</li>
-                    <li>Maquillaje profesional</li>
-                    <li>Manicuría</li>
-                    <li>Perfilado de cejas</li>
-                    <li>Lifting de pestañas</li>
+                <div class="bg-white border-2 border-[#c94a75] rounded-2xl p-5 relative transition-all duration-300 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:-translate-y-0.5">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#c94a75] text-white text-[11px] font-semibold px-3.5 py-1 rounded-full whitespace-nowrap">El más elegido</span>
+                <h4 class="text-[0.9rem] sm:text-base font-bold mb-3.5 text-[#333]">Combo Completo</h4>
+                <ul class="list-none p-0 m-0">
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Peinado</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Maquillaje profesional</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Manicuría</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Perfilado de cejas</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Lifting de pestañas</li>
                 </ul>
                 </div>
-                <div class="nq-combo">
-                <h4>Combo Beauty Total</h4>
-                <ul>
-                    <li>Peinado</li>
-                    <li>Maquillaje profesional</li>
-                    <li>Manicuría + pedicuría</li>
-                    <li>Perfilado de cejas</li>
-                    <li>Lifting de pestañas</li>
+                <div class="bg-white border border-[#e8d0d9] rounded-2xl p-5 relative transition-all duration-300 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] hover:-translate-y-0.5">
+                <h4 class="text-[0.9rem] sm:text-base font-bold mb-3.5 text-[#333]">Combo Beauty Total</h4>
+                <ul class="list-none p-0 m-0">
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Peinado</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Maquillaje profesional</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Manicuría + pedicuría</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Perfilado de cejas</li>
+                    <li class="text-[0.8rem] sm:text-sm text-gray-600 py-1.5 border-b border-[#f7e0e8] last:border-b-0 flex items-center gap-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#c94a75] before:shrink-0">Lifting de pestañas</li>
                 </ul>
                 </div>
             </div>
 
             <!-- FAQ -->
-            <div class="nq-faq" itemscope itemtype="https://schema.org/FAQPage">
-                <h3>Preguntas frecuentes</h3>
+            <div class="bg-white border border-[#e8d0d9] rounded-2xl p-6 mb-6" itemscope itemtype="https://schema.org/FAQPage">
+                <h3 class="text-[1.2rem] font-bold mb-4 text-[#333]">Preguntas frecuentes</h3>
                 
                 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h4 itemprop="name">¿Hacen prueba de maquillaje y peinado para novias?</h4>
+                <h4 class="text-[0.95rem] font-bold mt-4 mb-2 text-[#333]" itemprop="name">¿Hacen prueba de maquillaje y peinado para novias?</h4>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">
+                    <p class="text-[0.8rem] sm:text-sm text-gray-600 leading-[1.6] mb-4 last:mb-0" itemprop="text">
                     Sí. Coordinamos un turno de prueba previo al evento sin cargo adicional dentro de los combos.
                     Así definimos juntas el look ideal con tiempo y sin apuros.
                     </p>
@@ -855,9 +376,9 @@
                 </div>
 
                 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h4 itemprop="name">¿Atienden quinceañeras en Concordia?</h4>
+                <h4 class="text-[0.95rem] font-bold mt-4 mb-2 text-[#333]" itemprop="name">¿Atienden quinceañeras en Concordia?</h4>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">
+                    <p class="text-[0.8rem] sm:text-sm text-gray-600 leading-[1.6] mb-4 last:mb-0" itemprop="text">
                     Sí, atendemos en el Barrio Gobernador Cresto, Concordia, Entre Ríos.
                     Ofrecemos combos completos de peinado, maquillaje, uñas, cejas y pestañas para quinceañeras.
                     </p>
@@ -865,9 +386,9 @@
                 </div>
 
                 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h4 itemprop="name">¿Qué incluye el combo de belleza para novias?</h4>
+                <h4 class="text-[0.95rem] font-bold mt-4 mb-2 text-[#333]" itemprop="name">¿Qué incluye el combo de belleza para novias?</h4>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">
+                    <p class="text-[0.8rem] sm:text-sm text-gray-600 leading-[1.6] mb-4 last:mb-0" itemprop="text">
                     Ofrecemos tres combos: Esencial (peinado y maquillaje), Completo (agrega manicuría, cejas y pestañas)
                     y Beauty Total (suma pedicuría y lifting de pestañas). También incluimos repuesto de retoque
                     de maquillaje para el evento.
@@ -877,76 +398,81 @@
             </div>
 
             <!-- CTA -->
-            <div class="nq-cta">
-                <p>¿Querés consultar disponibilidad o armar tu combo personalizado?</p>
+            <div class="text-left p-6 bg-gradient-to-br from-[#f7e0e8] to-[#fdf5f8] rounded-2xl mt-4">
+                <p class="text-base font-semibold mb-4 text-[#333]">¿Querés consultar disponibilidad o armar tu combo personalizado?</p>
                 <a
                 href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20servicios%20para%20novia%20%2F%20quincea%C3%B1era%20%F0%9F%91%B8"
-                class="nq-btn nq-btn-primary"
+                class="inline-flex items-center justify-center px-7 py-3 rounded-full text-[0.95rem] font-semibold cursor-pointer transition-all duration-300 w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#1eb858] hover:scale-105"
                 rel="noopener"
                 aria-label="Consultar por WhatsApp sobre servicios para novias y quinceañeras"
                 >
                 Consultar por WhatsApp
                 </a>
-                <small>Turno de prueba coordinar con anticipación</small>
+                <small class="block mt-3 text-xs text-[#999]">Turno de prueba coordinar con anticipación</small>
             </div>
 
             </div>
 
             <!-- LADO DERECHO: Carrusel de Imágenes -->
-            <div class="nq-carousel-wrapper">
-            <div class="nq-carousel" role="region" aria-label="Galería de trabajos para novias y quinceañeras">
+            <div class="relative lg:sticky lg:top-[100px] h-fit max-w-[500px] lg:max-w-none mx-auto lg:mx-0 w-full">
+            <div class="nq-carousel relative w-full aspect-[3/4] sm:aspect-[9/12] lg:aspect-[3/4] rounded-2xl overflow-hidden bg-white shadow-[0_10px_40px_rgba(0,0,0,0.1)] border border-[#e8d0d9]" role="region" aria-label="Galería de trabajos para novias y quinceañeras">
                 
-                <!-- Imágenes (reemplazar src con URLs reales) -->
-                <div class="nq-carousel-slide nq-carousel-active">
+                <!-- Imágenes -->
+                <div class="nq-carousel-slide nq-carousel-active absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out flex items-center justify-center overflow-hidden [&.nq-carousel-active]:opacity-100 [&.nq-carousel-active]:z-10">
                 <img 
                     src="https://melifigarola.com/assets/img/hero/ondas-cabello-largo-balayage-maquillaje-profesional.webp"
                     alt="Peinado de ondas y maquillaje profesional para novia"
                     loading="lazy"
+                    class="w-full h-full object-cover block"
                 />
                 </div>
                 
-                <div class="nq-carousel-slide">
+                <div class="nq-carousel-slide absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out flex items-center justify-center overflow-hidden [&.nq-carousel-active]:opacity-100 [&.nq-carousel-active]:z-10">
                 <img 
                     src="https://melifigarola.com/assets/img/hero/peinado-rizado-largo-maquillaje-profesional-mujer-ojos-azules.webp"
                     alt="Peinado rizado con maquillaje profesional para evento"
                     loading="lazy"
+                    class="w-full h-full object-cover block"
                 />
                 </div>
                 
-                <div class="nq-carousel-slide">
+                <div class="nq-carousel-slide absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out flex items-center justify-center overflow-hidden [&.nq-carousel-active]:opacity-100 [&.nq-carousel-active]:z-10">
                 <img 
                     src="https://melifigarola.com/assets/img/corte-bob-liso-con-reflejos-color-ciruela-y-magenta.webp"
                     alt="Corte bob profesional para novia con color"
                     loading="lazy"
+                    class="w-full h-full object-cover block"
                 />
                 </div>
                 
-                <div class="nq-carousel-slide">
+                <div class="nq-carousel-slide absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out flex items-center justify-center overflow-hidden [&.nq-carousel-active]:opacity-100 [&.nq-carousel-active]:z-10">
                 <img 
                     src="https://melifigarola.com/assets/img/maquillaje-social-ondas-cabello-largo-look-invitada.webp"
                     alt="Maquillaje y peinado para evento social"
                     loading="lazy"
+                    class="w-full h-full object-cover block"
                 />
                 </div>
                 
-                <div class="nq-carousel-slide">
+                <div class="nq-carousel-slide absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out flex items-center justify-center overflow-hidden [&.nq-carousel-active]:opacity-100 [&.nq-carousel-active]:z-10">
                 <img 
                     src="https://melifigarola.com/assets/img/peinado-semi-recogido-trenza-ondas-maquillaje-salon.webp"
                     alt="Peinado semi-recogido con trenza para novia"
                     loading="lazy"
+                    class="w-full h-full object-cover block"
                 />
                 </div>
 
                 <!-- Navegación -->
                 <button 
-                class="nq-carousel-nav nq-carousel-nav-prev" 
+                class="nq-carousel-nav nq-carousel-nav-prev absolute top-1/2 -translate-y-1/2 left-3 sm:left-4 w-10 h-10 sm:w-11 sm:h-11 border-none bg-white/90 text-[#c94a75] text-2xl sm:text-3xl cursor-pointer flex items-center justify-center rounded-full transition-all duration-300 z-20 shadow-[0_2px_8px_rgba(0,0,0,0.1)] hover:bg-white hover:scale-110 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]" 
                 aria-label="Imagen anterior"
                 onclick="window.nqCarousel && window.nqCarousel.prev()"
                 >
                 &#8249;
                 </button>
                 <button 
-                class="nq-carousel-nav nq-carousel-nav-next" 
+                class="nq-carousel-nav nq-carousel-nav-next absolute top-1/2 -translate-y-1/2 right-3 sm:right-4 w-10 h-10 sm:w-11 sm:h-11 border-none bg-white/90 text-[#c94a75] text-2xl sm:text-3xl cursor-pointer flex items-center justify-center rounded-full transition-all duration-300 z-20 shadow-[0_2px_8px_rgba(0,0,0,0.1)] hover:bg-white hover:scale-110 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]" 
                 aria-label="Siguiente imagen"
                 onclick="window.nqCarousel && window.nqCarousel.next()"
                 >
@@ -954,12 +480,12 @@
                 </button>
 
                 <!-- Indicadores (dots) -->
-                <div class="nq-carousel-dots">
-                <button class="nq-dot nq-dot-active" aria-label="Ir a slide 1" onclick="window.nqCarousel && window.nqCarousel.goTo(0)"></button>
-                <button class="nq-dot" aria-label="Ir a slide 2" onclick="window.nqCarousel && window.nqCarousel.goTo(1)"></button>
-                <button class="nq-dot" aria-label="Ir a slide 3" onclick="window.nqCarousel && window.nqCarousel.goTo(2)"></button>
-                <button class="nq-dot" aria-label="Ir a slide 4" onclick="window.nqCarousel && window.nqCarousel.goTo(3)"></button>
-                <button class="nq-dot" aria-label="Ir a slide 5" onclick="window.nqCarousel && window.nqCarousel.goTo(4)"></button>
+                <div class="nq-carousel-dots absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                <button class="nq-dot nq-dot-active w-2.5 h-2.5 rounded-full bg-white/50 border-none cursor-pointer transition-all duration-300 hover:bg-white/80 [&.nq-dot-active]:bg-white [&.nq-dot-active]:w-[30px] [&.nq-dot-active]:rounded-md" aria-label="Ir a slide 1" onclick="window.nqCarousel && window.nqCarousel.goTo(0)"></button>
+                <button class="nq-dot w-2.5 h-2.5 rounded-full bg-white/50 border-none cursor-pointer transition-all duration-300 hover:bg-white/80 [&.nq-dot-active]:bg-white [&.nq-dot-active]:w-[30px] [&.nq-dot-active]:rounded-md" aria-label="Ir a slide 2" onclick="window.nqCarousel && window.nqCarousel.goTo(1)"></button>
+                <button class="nq-dot w-2.5 h-2.5 rounded-full bg-white/50 border-none cursor-pointer transition-all duration-300 hover:bg-white/80 [&.nq-dot-active]:bg-white [&.nq-dot-active]:w-[30px] [&.nq-dot-active]:rounded-md" aria-label="Ir a slide 3" onclick="window.nqCarousel && window.nqCarousel.goTo(2)"></button>
+                <button class="nq-dot w-2.5 h-2.5 rounded-full bg-white/50 border-none cursor-pointer transition-all duration-300 hover:bg-white/80 [&.nq-dot-active]:bg-white [&.nq-dot-active]:w-[30px] [&.nq-dot-active]:rounded-md" aria-label="Ir a slide 4" onclick="window.nqCarousel && window.nqCarousel.goTo(3)"></button>
+                <button class="nq-dot w-2.5 h-2.5 rounded-full bg-white/50 border-none cursor-pointer transition-all duration-300 hover:bg-white/80 [&.nq-dot-active]:bg-white [&.nq-dot-active]:w-[30px] [&.nq-dot-active]:rounded-md" aria-label="Ir a slide 5" onclick="window.nqCarousel && window.nqCarousel.goTo(4)"></button>
                 </div>
             </div>
             </div>
@@ -967,7 +493,7 @@
         </div>
     </section>
 
-    <!-- 4. Servicios -->
+    <!-- 5. Servicios -->
     <section id="servicios" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 gsap-reveal">
@@ -1093,7 +619,7 @@
         </div>
     </section>
 
-    <!-- 5. Sobre Meli -->
+    <!-- 6. Sobre Meli -->
     <section id="sobre-meli" class="py-24 bg-brand-pink/20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16">
