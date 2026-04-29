@@ -56,6 +56,487 @@
     <!-- Style CSS -->
     <link rel="stylesheet" src="./assets/css/style.css">
 
+    <style>
+:root {
+  --nq-primary: #c94a75;
+  --nq-primary-light: #f7e0e8;
+  --nq-text-dark: #333;
+  --nq-text-light: #666;
+  --nq-text-muted: #999;
+  --nq-border: #e8d0d9;
+  --nq-white: #fff;
+  --nq-bg-light: #fdf8f9;
+}
+
+.nq-section {
+  padding: 80px 0;
+  background: var(--nq-bg-light);
+}
+
+.nq-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ===== CONTENIDO (IZQUIERDA) ===== */
+.nq-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nq-badge {
+  display: inline-block;
+  background: var(--nq-primary-light);
+  color: var(--nq-primary);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+
+.nq-heading {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+  color: var(--nq-text-dark);
+}
+
+.nq-intro {
+  font-size: 1.05rem;
+  color: var(--nq-text-light);
+  line-height: 1.7;
+  margin: 0 0 2rem;
+}
+
+/* Diferenciales */
+.nq-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.nq-feature {
+  background: var(--nq-white);
+  border: 1px solid var(--nq-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.nq-feature:hover {
+  border-color: var(--nq-primary);
+  box-shadow: 0 4px 12px rgba(201, 74, 117, 0.08);
+}
+
+.nq-feature h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--nq-primary);
+}
+
+.nq-feature p {
+  font-size: 0.875rem;
+  color: var(--nq-text-light);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Combos */
+.nq-combos-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.4rem;
+  color: var(--nq-text-dark);
+}
+
+.nq-combos-subtitle {
+  color: var(--nq-text-light);
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+.nq-combos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.nq-combo {
+  background: var(--nq-white);
+  border: 1px solid var(--nq-border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nq-combo:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.nq-combo-featured {
+  border: 2px solid var(--nq-primary);
+}
+
+.nq-combo-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--nq-primary);
+  color: var(--nq-white);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.nq-combo h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: var(--nq-text-dark);
+}
+
+.nq-combo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nq-combo ul li {
+  font-size: 0.875rem;
+  color: var(--nq-text-light);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--nq-primary-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nq-combo ul li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--nq-primary);
+  flex-shrink: 0;
+}
+
+.nq-combo ul li:last-child {
+  border-bottom: none;
+}
+
+/* FAQ */
+.nq-faq {
+  background: var(--nq-white);
+  border: 1px solid var(--nq-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nq-faq h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--nq-text-dark);
+}
+
+.nq-faq h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  color: var(--nq-text-dark);
+}
+
+.nq-faq p {
+  font-size: 0.875rem;
+  color: var(--nq-text-light);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+/* CTA */
+.nq-cta {
+  text-align: left;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--nq-primary-light) 0%, #fdf5f8 100%);
+  border-radius: 14px;
+  margin-top: 1rem;
+}
+
+.nq-cta p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--nq-text-dark);
+}
+
+.nq-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nq-btn-primary {
+  background: #25D366;
+  color: var(--nq-white);
+}
+
+.nq-btn-primary:hover {
+  background: #1eb858;
+  transform: scale(1.05);
+}
+
+.nq-cta small {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--nq-text-muted);
+}
+
+/* ===== CARRUSEL (DERECHA) ===== */
+.nq-carousel-wrapper {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.nq-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--nq-white);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--nq-border);
+}
+
+.nq-carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.nq-carousel-slide.nq-carousel-active {
+  opacity: 1;
+  z-index: 10;
+}
+
+.nq-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botones de navegación */
+.nq-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--nq-primary);
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 20;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nq-carousel-nav:hover {
+  background: var(--nq-white);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nq-carousel-nav-prev {
+  left: 16px;
+}
+
+.nq-carousel-nav-next {
+  right: 16px;
+}
+
+/* Indicadores (dots) */
+.nq-carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 20;
+}
+
+.nq-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nq-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.nq-dot-active {
+  background: var(--nq-white);
+  width: 30px;
+  border-radius: 5px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .nq-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nq-carousel-wrapper {
+    position: relative;
+    top: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .nq-carousel {
+    aspect-ratio: 3/4;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nq-section {
+    padding: 60px 0;
+  }
+
+  .nq-container {
+    gap: 30px;
+  }
+
+  .nq-heading {
+    font-size: 1.5rem;
+  }
+
+  .nq-intro {
+    font-size: 0.95rem;
+  }
+
+  .nq-features {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .nq-combos {
+    grid-template-columns: 1fr;
+  }
+
+  .nq-carousel {
+    aspect-ratio: 3/4;
+  }
+
+  .nq-carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .nq-carousel-nav-prev {
+    left: 12px;
+  }
+
+  .nq-carousel-nav-next {
+    right: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nq-section {
+    padding: 40px 0;
+  }
+
+  .nq-container {
+    padding: 0 16px;
+    gap: 20px;
+  }
+
+  .nq-heading {
+    font-size: 1.35rem;
+  }
+
+  .nq-intro {
+    font-size: 0.9rem;
+  }
+
+  .nq-badge {
+    font-size: 12px;
+  }
+
+  .nq-feature h3,
+  .nq-combo h4 {
+    font-size: 0.9rem;
+  }
+
+  .nq-feature p,
+  .nq-combo ul li,
+  .nq-faq p {
+    font-size: 0.8rem;
+  }
+
+  .nq-btn {
+    width: 100%;
+  }
+
+  .nq-carousel {
+    aspect-ratio: 9/12;
+  }
+}
+</style>
+
     <!-- SCHEMA MARKUP -->
     <script type="application/ld+json">
     {
@@ -287,204 +768,204 @@
     </section>
 
     <section id="novias-quinceaneras" class="nq-section">
-  <div class="nq-container">
-    
-    <!-- LADO IZQUIERDO: Contenido -->
-    <div class="nq-content">
-      
-      <span class="nq-badge">Novias &amp; Quinceañeras</span>
-      <h2 class="nq-heading">Tu look más especial, con el equipo que más te cuida</h2>
-      <p class="nq-intro">
-        Sabemos lo importante que es ese día. Contamos con un equipo profesional dedicado
-        exclusivamente a vos, con atención preferencial y personalizada, asesoría previa,
-        prueba incluida y acompañamiento en cada detalle para que llegues perfecta.
-      </p>
-
-      <!-- Diferenciales -->
-      <div class="nq-features">
-        <div class="nq-feature">
-          <h3>Equipo profesional</h3>
-          <p>Trabajamos coordinadas para que todo fluya sin apuros el día de tu evento.</p>
-        </div>
-        <div class="nq-feature">
-          <h3>Atención preferencial y personalizada</h3>
-          <p>Desde la primera consulta, tu look es nuestro único foco. Te escuchamos y diseñamos juntas.</p>
-        </div>
-        <div class="nq-feature">
-          <h3>Asesoría y prueba</h3>
-          <p>Coordinamos un turno de prueba previo para definir peinado y maquillaje con tiempo y tranquilidad.</p>
-        </div>
-        <div class="nq-feature">
-          <h3>Repuesto de retoque</h3>
-          <p>Te preparamos un kit de maquillaje personalizado para que puedas retocarte durante el evento.</p>
-        </div>
-        <div class="nq-feature">
-          <h3>Ambiente cálido y contenedor</h3>
-          <p>Un espacio pensado para que disfrutes cada momento de la preparación sin estrés.</p>
-        </div>
-      </div>
-
-      <!-- Combos -->
-      <h3 class="nq-combos-title">Nuestros combos</h3>
-      <p class="nq-combos-subtitle">Armamos paquetes a medida para que tengas todo resuelto en un solo lugar.</p>
-
-      <div class="nq-combos">
-        <div class="nq-combo">
-          <h4>Combo Esencial</h4>
-          <ul>
-            <li>Peinado</li>
-            <li>Maquillaje profesional</li>
-          </ul>
-        </div>
-        <div class="nq-combo nq-combo-featured">
-          <span class="nq-combo-badge">El más elegido</span>
-          <h4>Combo Completo</h4>
-          <ul>
-            <li>Peinado</li>
-            <li>Maquillaje profesional</li>
-            <li>Manicuría</li>
-            <li>Perfilado de cejas</li>
-            <li>Lifting de pestañas</li>
-          </ul>
-        </div>
-        <div class="nq-combo">
-          <h4>Combo Beauty Total</h4>
-          <ul>
-            <li>Peinado</li>
-            <li>Maquillaje profesional</li>
-            <li>Manicuría + pedicuría</li>
-            <li>Perfilado de cejas</li>
-            <li>Lifting de pestañas</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- FAQ -->
-      <div class="nq-faq" itemscope itemtype="https://schema.org/FAQPage">
-        <h3>Preguntas frecuentes</h3>
-        
-        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">¿Hacen prueba de maquillaje y peinado para novias?</h4>
-          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">
-              Sí. Coordinamos un turno de prueba previo al evento sin cargo adicional dentro de los combos.
-              Así definimos juntas el look ideal con tiempo y sin apuros.
+        <div class="nq-container">
+            
+            <!-- LADO IZQUIERDO: Contenido -->
+            <div class="nq-content">
+            
+            <span class="nq-badge">Novias &amp; Quinceañeras</span>
+            <h2 class="nq-heading">Tu look más especial, con el equipo que más te cuida</h2>
+            <p class="nq-intro">
+                Sabemos lo importante que es ese día. Contamos con un equipo profesional dedicado
+                exclusivamente a vos, con atención preferencial y personalizada, asesoría previa,
+                prueba incluida y acompañamiento en cada detalle para que llegues perfecta.
             </p>
-          </div>
-        </div>
 
-        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">¿Atienden quinceañeras en Concordia?</h4>
-          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">
-              Sí, atendemos en el Barrio Gobernador Cresto, Concordia, Entre Ríos.
-              Ofrecemos combos completos de peinado, maquillaje, uñas, cejas y pestañas para quinceañeras.
-            </p>
-          </div>
-        </div>
+            <!-- Diferenciales -->
+            <div class="nq-features">
+                <div class="nq-feature">
+                <h3>Equipo profesional</h3>
+                <p>Trabajamos coordinadas para que todo fluya sin apuros el día de tu evento.</p>
+                </div>
+                <div class="nq-feature">
+                <h3>Atención preferencial y personalizada</h3>
+                <p>Desde la primera consulta, tu look es nuestro único foco. Te escuchamos y diseñamos juntas.</p>
+                </div>
+                <div class="nq-feature">
+                <h3>Asesoría y prueba</h3>
+                <p>Coordinamos un turno de prueba previo para definir peinado y maquillaje con tiempo y tranquilidad.</p>
+                </div>
+                <div class="nq-feature">
+                <h3>Repuesto de retoque</h3>
+                <p>Te preparamos un kit de maquillaje personalizado para que puedas retocarte durante el evento.</p>
+                </div>
+                <div class="nq-feature">
+                <h3>Ambiente cálido y contenedor</h3>
+                <p>Un espacio pensado para que disfrutes cada momento de la preparación sin estrés.</p>
+                </div>
+            </div>
 
-        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h4 itemprop="name">¿Qué incluye el combo de belleza para novias?</h4>
-          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">
-              Ofrecemos tres combos: Esencial (peinado y maquillaje), Completo (agrega manicuría, cejas y pestañas)
-              y Beauty Total (suma pedicuría y lifting de pestañas). También incluimos repuesto de retoque
-              de maquillaje para el evento.
-            </p>
-          </div>
-        </div>
-      </div>
+            <!-- Combos -->
+            <h3 class="nq-combos-title">Nuestros combos</h3>
+            <p class="nq-combos-subtitle">Armamos paquetes a medida para que tengas todo resuelto en un solo lugar.</p>
 
-      <!-- CTA -->
-      <div class="nq-cta">
-        <p>¿Querés consultar disponibilidad o armar tu combo personalizado?</p>
-        <a
-          href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20servicios%20para%20novia%20%2F%20quincea%C3%B1era%20%F0%9F%91%B8"
-          class="nq-btn nq-btn-primary"
-          rel="noopener"
-          aria-label="Consultar por WhatsApp sobre servicios para novias y quinceañeras"
-        >
-          Consultar por WhatsApp
-        </a>
-        <small>Turno de prueba coordinar con anticipación</small>
-      </div>
+            <div class="nq-combos">
+                <div class="nq-combo">
+                <h4>Combo Esencial</h4>
+                <ul>
+                    <li>Peinado</li>
+                    <li>Maquillaje profesional</li>
+                </ul>
+                </div>
+                <div class="nq-combo nq-combo-featured">
+                <span class="nq-combo-badge">El más elegido</span>
+                <h4>Combo Completo</h4>
+                <ul>
+                    <li>Peinado</li>
+                    <li>Maquillaje profesional</li>
+                    <li>Manicuría</li>
+                    <li>Perfilado de cejas</li>
+                    <li>Lifting de pestañas</li>
+                </ul>
+                </div>
+                <div class="nq-combo">
+                <h4>Combo Beauty Total</h4>
+                <ul>
+                    <li>Peinado</li>
+                    <li>Maquillaje profesional</li>
+                    <li>Manicuría + pedicuría</li>
+                    <li>Perfilado de cejas</li>
+                    <li>Lifting de pestañas</li>
+                </ul>
+                </div>
+            </div>
 
-    </div>
+            <!-- FAQ -->
+            <div class="nq-faq" itemscope itemtype="https://schema.org/FAQPage">
+                <h3>Preguntas frecuentes</h3>
+                
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h4 itemprop="name">¿Hacen prueba de maquillaje y peinado para novias?</h4>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">
+                    Sí. Coordinamos un turno de prueba previo al evento sin cargo adicional dentro de los combos.
+                    Así definimos juntas el look ideal con tiempo y sin apuros.
+                    </p>
+                </div>
+                </div>
 
-    <!-- LADO DERECHO: Carrusel de Imágenes -->
-    <div class="nq-carousel-wrapper">
-      <div class="nq-carousel" role="region" aria-label="Galería de trabajos para novias y quinceañeras">
-        
-        <!-- Imágenes (reemplazar src con URLs reales) -->
-        <div class="nq-carousel-slide nq-carousel-active">
-          <img 
-            src="https://melifigarola.com/assets/img/hero/ondas-cabello-largo-balayage-maquillaje-profesional.webp"
-            alt="Peinado de ondas y maquillaje profesional para novia"
-            loading="lazy"
-          />
-        </div>
-        
-        <div class="nq-carousel-slide">
-          <img 
-            src="https://melifigarola.com/assets/img/hero/peinado-rizado-largo-maquillaje-profesional-mujer-ojos-azules.webp"
-            alt="Peinado rizado con maquillaje profesional para evento"
-            loading="lazy"
-          />
-        </div>
-        
-        <div class="nq-carousel-slide">
-          <img 
-            src="https://melifigarola.com/assets/img/corte-bob-liso-con-reflejos-color-ciruela-y-magenta.webp"
-            alt="Corte bob profesional para novia con color"
-            loading="lazy"
-          />
-        </div>
-        
-        <div class="nq-carousel-slide">
-          <img 
-            src="https://melifigarola.com/assets/img/maquillaje-social-ondas-cabello-largo-look-invitada.webp"
-            alt="Maquillaje y peinado para evento social"
-            loading="lazy"
-          />
-        </div>
-        
-        <div class="nq-carousel-slide">
-          <img 
-            src="https://melifigarola.com/assets/img/peinado-semi-recogido-trenza-ondas-maquillaje-salon.webp"
-            alt="Peinado semi-recogido con trenza para novia"
-            loading="lazy"
-          />
-        </div>
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h4 itemprop="name">¿Atienden quinceañeras en Concordia?</h4>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">
+                    Sí, atendemos en el Barrio Gobernador Cresto, Concordia, Entre Ríos.
+                    Ofrecemos combos completos de peinado, maquillaje, uñas, cejas y pestañas para quinceañeras.
+                    </p>
+                </div>
+                </div>
 
-        <!-- Navegación -->
-        <button 
-          class="nq-carousel-nav nq-carousel-nav-prev" 
-          aria-label="Imagen anterior"
-          onclick="window.nqCarousel && window.nqCarousel.prev()"
-        >
-          &#8249;
-        </button>
-        <button 
-          class="nq-carousel-nav nq-carousel-nav-next" 
-          aria-label="Siguiente imagen"
-          onclick="window.nqCarousel && window.nqCarousel.next()"
-        >
-          &#8250;
-        </button>
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h4 itemprop="name">¿Qué incluye el combo de belleza para novias?</h4>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">
+                    Ofrecemos tres combos: Esencial (peinado y maquillaje), Completo (agrega manicuría, cejas y pestañas)
+                    y Beauty Total (suma pedicuría y lifting de pestañas). También incluimos repuesto de retoque
+                    de maquillaje para el evento.
+                    </p>
+                </div>
+                </div>
+            </div>
 
-        <!-- Indicadores (dots) -->
-        <div class="nq-carousel-dots">
-          <button class="nq-dot nq-dot-active" aria-label="Ir a slide 1" onclick="window.nqCarousel && window.nqCarousel.goTo(0)"></button>
-          <button class="nq-dot" aria-label="Ir a slide 2" onclick="window.nqCarousel && window.nqCarousel.goTo(1)"></button>
-          <button class="nq-dot" aria-label="Ir a slide 3" onclick="window.nqCarousel && window.nqCarousel.goTo(2)"></button>
-          <button class="nq-dot" aria-label="Ir a slide 4" onclick="window.nqCarousel && window.nqCarousel.goTo(3)"></button>
-          <button class="nq-dot" aria-label="Ir a slide 5" onclick="window.nqCarousel && window.nqCarousel.goTo(4)"></button>
+            <!-- CTA -->
+            <div class="nq-cta">
+                <p>¿Querés consultar disponibilidad o armar tu combo personalizado?</p>
+                <a
+                href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20servicios%20para%20novia%20%2F%20quincea%C3%B1era%20%F0%9F%91%B8"
+                class="nq-btn nq-btn-primary"
+                rel="noopener"
+                aria-label="Consultar por WhatsApp sobre servicios para novias y quinceañeras"
+                >
+                Consultar por WhatsApp
+                </a>
+                <small>Turno de prueba coordinar con anticipación</small>
+            </div>
+
+            </div>
+
+            <!-- LADO DERECHO: Carrusel de Imágenes -->
+            <div class="nq-carousel-wrapper">
+            <div class="nq-carousel" role="region" aria-label="Galería de trabajos para novias y quinceañeras">
+                
+                <!-- Imágenes (reemplazar src con URLs reales) -->
+                <div class="nq-carousel-slide nq-carousel-active">
+                <img 
+                    src="https://melifigarola.com/assets/img/hero/ondas-cabello-largo-balayage-maquillaje-profesional.webp"
+                    alt="Peinado de ondas y maquillaje profesional para novia"
+                    loading="lazy"
+                />
+                </div>
+                
+                <div class="nq-carousel-slide">
+                <img 
+                    src="https://melifigarola.com/assets/img/hero/peinado-rizado-largo-maquillaje-profesional-mujer-ojos-azules.webp"
+                    alt="Peinado rizado con maquillaje profesional para evento"
+                    loading="lazy"
+                />
+                </div>
+                
+                <div class="nq-carousel-slide">
+                <img 
+                    src="https://melifigarola.com/assets/img/corte-bob-liso-con-reflejos-color-ciruela-y-magenta.webp"
+                    alt="Corte bob profesional para novia con color"
+                    loading="lazy"
+                />
+                </div>
+                
+                <div class="nq-carousel-slide">
+                <img 
+                    src="https://melifigarola.com/assets/img/maquillaje-social-ondas-cabello-largo-look-invitada.webp"
+                    alt="Maquillaje y peinado para evento social"
+                    loading="lazy"
+                />
+                </div>
+                
+                <div class="nq-carousel-slide">
+                <img 
+                    src="https://melifigarola.com/assets/img/peinado-semi-recogido-trenza-ondas-maquillaje-salon.webp"
+                    alt="Peinado semi-recogido con trenza para novia"
+                    loading="lazy"
+                />
+                </div>
+
+                <!-- Navegación -->
+                <button 
+                class="nq-carousel-nav nq-carousel-nav-prev" 
+                aria-label="Imagen anterior"
+                onclick="window.nqCarousel && window.nqCarousel.prev()"
+                >
+                &#8249;
+                </button>
+                <button 
+                class="nq-carousel-nav nq-carousel-nav-next" 
+                aria-label="Siguiente imagen"
+                onclick="window.nqCarousel && window.nqCarousel.next()"
+                >
+                &#8250;
+                </button>
+
+                <!-- Indicadores (dots) -->
+                <div class="nq-carousel-dots">
+                <button class="nq-dot nq-dot-active" aria-label="Ir a slide 1" onclick="window.nqCarousel && window.nqCarousel.goTo(0)"></button>
+                <button class="nq-dot" aria-label="Ir a slide 2" onclick="window.nqCarousel && window.nqCarousel.goTo(1)"></button>
+                <button class="nq-dot" aria-label="Ir a slide 3" onclick="window.nqCarousel && window.nqCarousel.goTo(2)"></button>
+                <button class="nq-dot" aria-label="Ir a slide 4" onclick="window.nqCarousel && window.nqCarousel.goTo(3)"></button>
+                <button class="nq-dot" aria-label="Ir a slide 5" onclick="window.nqCarousel && window.nqCarousel.goTo(4)"></button>
+                </div>
+            </div>
+            </div>
+
         </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!-- 4. Servicios -->
     <section id="servicios" class="py-24 bg-white relative">
@@ -750,6 +1231,83 @@
     <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:bg-[#20bd5a] hover:-translate-y-1 transition-all duration-300 wpp-pulse">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- ============================================================
+     JAVASCRIPT: Control del carrusel
+     ============================================================ -->
+<script>
+(function() {
+  const nqCarouselController = {
+    currentSlide: 0,
+    slides: [],
+    dots: [],
+    autoplayInterval: null,
+    autoplayDelay: 5000,
+
+    init() {
+      this.slides = document.querySelectorAll('.nq-carousel-slide');
+      this.dots = document.querySelectorAll('.nq-dot');
+      this.autoplay();
+      
+      // Pausa autoplay al interactuar
+      document.querySelector('.nq-carousel').addEventListener('mouseenter', () => this.stopAutoplay());
+      document.querySelector('.nq-carousel').addEventListener('mouseleave', () => this.autoplay());
+    },
+
+    showSlide(n) {
+      // Limpia todos los slides
+      this.slides.forEach(slide => slide.classList.remove('nq-carousel-active'));
+      this.dots.forEach(dot => dot.classList.remove('nq-dot-active'));
+
+      // Muestra el slide actual
+      this.slides[n].classList.add('nq-carousel-active');
+      this.dots[n].classList.add('nq-dot-active');
+      this.currentSlide = n;
+    },
+
+    next() {
+      this.stopAutoplay();
+      const n = (this.currentSlide + 1) % this.slides.length;
+      this.showSlide(n);
+      this.autoplay();
+    },
+
+    prev() {
+      this.stopAutoplay();
+      const n = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+      this.showSlide(n);
+      this.autoplay();
+    },
+
+    goTo(n) {
+      this.stopAutoplay();
+      this.showSlide(n);
+      this.autoplay();
+    },
+
+    autoplay() {
+      this.autoplayInterval = setInterval(() => this.next(), this.autoplayDelay);
+    },
+
+    stopAutoplay() {
+      if (this.autoplayInterval) {
+        clearInterval(this.autoplayInterval);
+        this.autoplayInterval = null;
+      }
+    }
+  };
+
+  // Inicializa cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => nqCarouselController.init());
+  } else {
+    nqCarouselController.init();
+  }
+
+  // Expone el controlador globalmente para onclick handlers
+  window.nqCarousel = nqCarouselController;
+})();
+</script>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
