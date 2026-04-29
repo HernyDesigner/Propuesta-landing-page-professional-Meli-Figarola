@@ -112,7 +112,7 @@
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-brand-pink transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-20 relative z-50">
                 <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
                     <span class="font-serif font-bold text-2xl tracking-widest text-brand-dark">MELI FIGAROLA</span>
                 </div>
@@ -120,10 +120,24 @@
                     <a href="#servicios" class="text-sm font-medium hover:text-brand-rose transition-colors">Servicios</a>
                     <a href="#portfolio" class="text-sm font-medium hover:text-brand-rose transition-colors">Trabajos</a>
                     <a href="#sobre-meli" class="text-sm font-medium hover:text-brand-rose transition-colors">Conoceme</a>
-                    <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="bg-brand-dark text-white px-5 py-2.5 rounded-full text-sm hover:bg-brand-rose transition-colors shadow-lg">
+                    <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno" target="_blank" class="bg-brand-dark text-white px-5 py-2.5 rounded-full text-sm hover:bg-brand-rose transition-colors shadow-lg">
                         Reservar Turno
                     </a>
                 </div>
+                <!-- Botón Toggle Mobile (NUEVO) -->
+                <button id="mobile-menu-btn" class="md:hidden text-brand-dark focus:outline-none p-2">
+                    <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-40 hidden flex-col justify-center items-center h-screen w-full opacity-0">
+            <div class="flex flex-col items-center space-y-8 text-center">
+                <a href="#servicios" class="mobile-link text-3xl font-serif font-medium text-brand-dark hover:text-brand-rose transition-colors opacity-0 translate-y-8">Servicios</a>
+                <a href="#portfolio" class="mobile-link text-3xl font-serif font-medium text-brand-dark hover:text-brand-rose transition-colors opacity-0 translate-y-8">Trabajos</a>
+                <a href="#sobre-meli" class="mobile-link text-3xl font-serif font-medium text-brand-dark hover:text-brand-rose transition-colors opacity-0 translate-y-8">Conoceme</a>
+                <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno" target="_blank" class="mobile-link mt-4 bg-brand-dark text-white px-8 py-4 rounded-full text-lg hover:bg-brand-rose transition-colors shadow-lg opacity-0 translate-y-8">
+                    Reservar Turno
+                </a>
             </div>
         </div>
     </nav>
@@ -144,7 +158,7 @@
                         Soy Meli Figarola, peluquera, colorista y maquilladora profesional. Diseñamos juntas el look perfecto que resalte tus facciones y refleje tu verdadera esencia, cuidando siempre la salud de tu pelo.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full font-medium hover:bg-brand-rose transition-all shadow-lg flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                        <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno" target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full font-medium hover:bg-brand-rose transition-all shadow-lg flex items-center justify-center gap-2 transform hover:-translate-y-1">
                             <i class="fab fa-whatsapp text-xl"></i> Consultar por WhatsApp
                         </a>
                         <a href="#servicios" class="border border-brand-dark text-brand-dark px-8 py-4 rounded-full font-medium hover:bg-brand-pink transition-all flex items-center justify-center">
@@ -163,19 +177,19 @@
                                 <img src="./assets/img/hero/equipo-de-meli-figarola-salon-de-belleza-peluqueria.webp" alt="Selfie de tres mujeres sonrientes en un salón de belleza moderno y bien iluminado. La mujer de la izquierda tiene cabello rizado color borgoña. La mujer del medio, con gafas, lleva una camiseta negra con el texto 'MELI FIGAROL' y un collar de mariposa. La mujer de la derecha tiene cabello castaño claro con reflejos rubios. El fondo muestra espejos, estaciones de peinado y estantes con productos cosméticos." class="object-cover w-full h-full object-top object-right">
                             </div>
                             <div class="swiper-slide">
-                                <img src="./assets/img/hero/peinado-liso-largo-cabello-oscuro-meli-figarola.webp" alt="Peinado profesional de cabello largo y liso en tono oscuro con un acabado pulido y brillante para el sitio de Meli Figarola. El look destaca la salud y textura del cabello en un estilo editorial, complementado con una blusa blanca de volantes y joyería dorada bajo una iluminación cálida." class="object-cover w-full h-full">
+                                <img src="./assets/img/hero/peinado-liso-largo-cabello-oscuro-meli-figarola.webp" alt="Peinado profesional de cabello largo y liso en tono oscuro con un acabado pulido y brillante para el sitio de Meli Figarola. El look destaca la salud y textura del cabello en un estilo editorial, complementado con una blusa blanca de volantes y joyería dorada bajo una iluminación cálida." class="object-cover w-full h-full object-top">
                             </div>
                             <div class="swiper-slide">
-                                <img src="./assets/img/hero/peinado-ondas-suaves-cabello-largo-oscuro-meli-figarola.webp" alt="Peinado de ondas suaves y definidas en cabello largo y oscuro con un acabado brillante y saludable. El look se completa con un sombrero marrón de ala ancha y maquillaje natural, destacando la textura y el movimiento del cabello en un entorno exterior iluminado por el atardecer." class="object-cover w-full h-full">
+                                <img src="./assets/img/hero/peinado-ondas-suaves-cabello-largo-oscuro-meli-figarola.webp" alt="Peinado de ondas suaves y definidas en cabello largo y oscuro con un acabado brillante y saludable. El look se completa con un sombrero marrón de ala ancha y maquillaje natural, destacando la textura y el movimiento del cabello en un entorno exterior iluminado por el atardecer." class="object-cover w-full h-full object-top">
                             </div>
                             <div class="swiper-slide">
-                                <img src="./assets/img/hero/peinado-ondas-volumen-cabello-castano-meli-figarola.webp" alt="Peinado de ondas suaves y voluminosas en cabello castaño con reflejos cálidos, luciendo un acabado brillante y con movimiento natural. El look destaca una melena saludable y estilizada para el sitio de Meli Figarola, capturada en un estilo editorial con un vestido floral y ambientación rústica." class="object-cover w-full h-full">
+                                <img src="./assets/img/hero/peinado-ondas-volumen-cabello-castano-meli-figarola.webp" alt="Peinado de ondas suaves y voluminosas en cabello castaño con reflejos cálidos, luciendo un acabado brillante y con movimiento natural. El look destaca una melena saludable y estilizada para el sitio de Meli Figarola, capturada en un estilo editorial con un vestido floral y ambientación rústica." class="object-cover w-full h-full object-top">
                             </div>
                             <div class="swiper-slide">
-                                <img src="./assets/img/hero/maquillaje-artistico-ojos-azul-agua-con-gemas-cabello-blanco.webp" alt="Primer plano de una persona con un maquillaje facial artístico de belleza. Sus ojos están cubiertos por un diseño vibrante de azul turquesa y blanco que parece una ola o sal texturizada, extendiéndose en forma de máscara alada. El borde del maquillaje está adornado con gemas y cristales azules y blancos. Su cabello es corto y de color blanco escarchado. Tiene ojos azules claros que miran directamente a la cámara. Su mano derecha, con uñas pintadas de negro con diseños blancos abstractos, toca su mejilla. Se ven varios pendientes de plata en su oreja. El cuello y el pecho están parcialmente visibles, cubiertos de purpurina azul. El fondo está borroso con luces blancas y plateadas." class="object-cover w-full h-full">
+                                <img src="./assets/img/hero/maquillaje-artistico-ojos-azul-agua-con-gemas-cabello-blanco.webp" alt="Primer plano de una persona con un maquillaje facial artístico de belleza. Sus ojos están cubiertos por un diseño vibrante de azul turquesa y blanco que parece una ola o sal texturizada, extendiéndose en forma de máscara alada. El borde del maquillaje está adornado con gemas y cristales azules y blancos. Su cabello es corto y de color blanco escarchado. Tiene ojos azules claros que miran directamente a la cámara. Su mano derecha, con uñas pintadas de negro con diseños blancos abstractos, toca su mejilla. Se ven varios pendientes de plata en su oreja. El cuello y el pecho están parcialmente visibles, cubiertos de purpurina azul. El fondo está borroso con luces blancas y plateadas." class="object-cover w-full h-full object-top">
                             </div>
                             <div class="swiper-slide">
-                                <img src="./assets/img/hero/nina-sonriente-con-tiara-y-camisa-a-rayas-rosas.webp" alt="Un retrato de primer plano de una niña joven con cabello castaño claro peinado en ondas sueltas y rizos, sonriendo cálidamente directamente a la cámara. Lleva una tiara de plata intrincada y brillante con adornos de cristal colocada sobre su cabello. Está vestida con una camisa de botones a rayas rosa y blancas con cuello. El fondo es un interior de habitación desenfocado y cálidamente iluminado, lo que sugiere un entorno doméstico o área de preparación. Su expresión es alegre y feliz." class="object-cover w-full h-full">
+                                <img src="./assets/img/hero/peinado-semirecogido-dos-colitas-cabello-bicolor-meli-figarola.webp" alt="Peinado semirecogido con dos coletas altas y trenzas de raíz en cabello liso, destacando una transición de color de castaño a rubio ceniza para el sitio de Meli Figarola. El look editorial se caracteriza por una melena con acabado pulido y saludable, alineada con la estética visual del salón, complementada con un maquillaje artístico vibrante y un top de encaje amarillo." class="object-cover w-full h-full object-top">
                             </div>
                         </div>
                     </div>
@@ -290,7 +304,7 @@
 
             <!-- FAQ -->
             <div class="bg-white border border-[#e8d0d9] rounded-2xl p-6 mb-6" itemscope itemtype="https://schema.org/FAQPage">
-                <h3 class="text-[1.2rem] font-bold mb-4 text-[#333]">Preguntas frecuentes sobre servicios para eventos</h3>
+                <h3 class="font-serif text-2xl font-bold text-brand-dark">Preguntas frecuentes sobre servicios para eventos</h3>
                 
                 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                 <h4 class="text-[0.95rem] font-bold mt-4 mb-2 text-[#333]" itemprop="name">¿Cómo es la prueba de maquillaje y peinado para novias?</h4>
@@ -321,15 +335,16 @@
             </div>
 
             <!-- CTA -->
-            <div class="text-left p-6 bg-gradient-to-br from-[#f7e0e8] to-[#fdf5f8] rounded-2xl mt-4">
-                <p class="text-base font-semibold mb-4 text-[#333]">¿Querés reservar tu fecha de casamiento o 15 años?</p>
+            <div class="text-center p-6 bg-gradient-to-br from-[#f7e0e8] to-[#fdf5f8] rounded-2xl mt-4 justify-center">
+                <p class="font-serif text-2xl md:text-3xl font-bold text-brand-dark mb-5">Reservá tu fecha para el look soñado de casamiento o 15 años.</p>
                 <a
-                href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20servicios%20para%20novia%20%2F%20quincea%C3%B1era%20%F0%9F%91%B8"
-                class="inline-flex items-center justify-center px-7 py-3 rounded-full text-[0.95rem] font-semibold cursor-pointer transition-all duration-300 w-full sm:w-auto bg-[#25D366] text-white hover:bg-[#1eb858] hover:scale-105"
-                rel="noopener"
-                aria-label="Consultar por WhatsApp sobre disponibilidad para Novias y Quinceañeras"
+                    href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20servicios%20para%20novia%20y%20quincea%C3%B1era"
+                    class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-7 py-3 mb-3 rounded-full font-semibold text-base bg-[#25D366] text-white hover:bg-[#1eb858] transition-all duration-300 shadow-lg transform hover:scale-105 cursor-pointer"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Consultar por WhatsApp sobre disponibilidad para Novias y Quinceañeras"
                 >
-                Consultar disponibilidad por WhatsApp
+                    <i class="fab fa-whatsapp text-xl"></i> Consultar disponibilidad por WhatsApp
                 </a>
                 <small class="block mt-3 text-xs text-[#999]">Se recomienda coordinar la prueba de Quince Años o Novia con anticipación</small>
             </div>
@@ -338,7 +353,7 @@
 
             <!-- LADO DERECHO: Carrusel de Imágenes -->
             <div class="relative lg:sticky lg:top-[100px] h-fit max-w-[500px] lg:max-w-none mx-auto lg:mx-0 w-full">
-            <div class="nq-carousel relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-white shadow-[0_10px_40px_rgba(0,0,0,0.1)] border border-[#e8d0d9]" role="region" aria-label="Galería de estilos para novias y quince años">
+            <div class="nq-carousel relative w-full aspect-[4/5] max-h-[85vh] rounded-2xl overflow-hidden bg-white shadow-[0_10px_40px_rgba(0,0,0,0.1)] border border-[#e8d0d9]" role="region" aria-label="Galería de estilos para novias y quince años">
                 
                 <!-- Imágenes con ALT Text Optimizado -->
                 <div class="nq-carousel-slide nq-carousel-active absolute w-full h-full opacity-0 transition-opacity duration-500 ease-in-out flex items-center justify-center overflow-hidden [&.nq-carousel-active]:opacity-100 [&.nq-carousel-active]:z-10">
@@ -596,6 +611,14 @@
                     <h3 class="font-serif text-2xl font-bold mb-3">Depilación láser definitiva</h3>
                     <p class="text-gray-600 text-sm mb-4">Piel suave y libre de vello. Tecnología segura y eficaz para resultados duraderos y cómodos en todas las zonas.</p>
                 </div>
+                <!-- Servicio 15 -->
+                <div class="gsap-service-card bg-[#FAFAFA] rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group opacity-0">
+                    <div class="bg-brand-pink w-14 h-14 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-crown text-brand-rose text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Quince Años y Novias</h3>
+                    <p class="text-gray-600 text-sm mb-4">Peinados y maquillaje para novias y quinceañeras. Atención personalizada, prueba de look y estilo único.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -649,8 +672,13 @@
                     <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-dark mb-4">¿Lista para tu cambio?</h2>
                     <p class="text-gray-600 mb-8 text-lg">Escribinos directo por WhatsApp, es la forma más rápida de asesorarte, contarte sobre presupuestos y buscar un turno que te quede cómodo.</p>
                     
-                    <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-colors shadow-lg transform hover:scale-105 duration-300">
-                        <i class="fab fa-whatsapp text-2xl"></i> Enviar WhatsApp
+                    <a 
+                        href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno" 
+                        class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-7 py-3 rounded-full font-semibold text-base bg-[#25D366] text-white hover:bg-[#1eb858] transition-all duration-300 shadow-lg transform hover:scale-105 cursor-pointer"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <i class="fab fa-whatsapp text-xl"></i> Enviar WhatsApp
                     </a>
                 </div>
 
@@ -699,7 +727,7 @@
                     <ul class="space-y-3 text-gray-600 text-sm">
                         <li class="flex items-start gap-3">
                             <i class="fab fa-whatsapp text-brand-rose mt-1"></i>
-                            <a href="https://wa.me/5493454026404" target="_blank" class="hover:text-brand-rose transition-colors">+54 9 3454 02-6404</a>
+                            <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Me%20contacto%20desde%20la%20web" target="_blank" class="hover:text-brand-rose transition-colors">+54 9 3454 02-6404</a>
                         </li>
                     </ul>
                 </div>
@@ -718,6 +746,7 @@
                         <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Spa de pies completo</a></li>
                         <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Manicuría</a></li>
                         <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Presoterapia</a></li>
+                        <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Quince Años y Novias</a></li>
                         <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Maderoterapia</a></li>
                         <li><a href="#servicios" class="hover:text-brand-rose transition-colors">Depilación Láser definitiva</a></li>
                     </ul>
@@ -735,7 +764,7 @@
     </a>
 
     <!-- WPP Flotante (Derecha) -->
-    <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno%20%F0%9F%98%8A" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:bg-[#20bd5a] hover:-translate-y-1 transition-all duration-300 wpp-pulse">
+    <a href="https://wa.me/5493454026404?text=Hola%20Meli!%20Quiero%20consultar%20por%20un%20turno" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:bg-[#20bd5a] hover:-translate-y-1 transition-all duration-300 wpp-pulse">
         <i class="fab fa-whatsapp"></i>
     </a>
 
