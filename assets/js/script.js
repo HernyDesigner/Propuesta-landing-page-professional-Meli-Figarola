@@ -86,4 +86,75 @@
 
 
 
-    
+// Control del carrusel
+function() {
+  const nqCarouselController = {
+    currentSlide: 0,
+    slides: [],
+    dots: [],
+    autoplayInterval: null,
+    autoplayDelay: 5000,
+
+    init() {
+      this.slides = document.querySelectorAll('.nq-carousel-slide');
+      this.dots = document.querySelectorAll('.nq-dot');
+      this.autoplay();
+      
+      // Pausa autoplay al interactuar
+      document.querySelector('.nq-carousel').addEventListener('mouseenter', () => this.stopAutoplay());
+      document.querySelector('.nq-carousel').addEventListener('mouseleave', () => this.autoplay());
+    },
+
+    showSlide(n) {
+      // Limpia todos los slides
+      this.slides.forEach(slide => slide.classList.remove('nq-carousel-active'));
+      this.dots.forEach(dot => dot.classList.remove('nq-dot-active'));
+
+      // Muestra el slide actual
+      this.slides[n].classList.add('nq-carousel-active');
+      this.dots[n].classList.add('nq-dot-active');
+      this.currentSlide = n;
+    },
+
+    next() {
+      this.stopAutoplay();
+      const n = (this.currentSlide + 1) % this.slides.length;
+      this.showSlide(n);
+      this.autoplay();
+    },
+
+    prev() {
+      this.stopAutoplay();
+      const n = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+      this.showSlide(n);
+      this.autoplay();
+    },
+
+    goTo(n) {
+      this.stopAutoplay();
+      this.showSlide(n);
+      this.autoplay();
+    },
+
+    autoplay() {
+      this.autoplayInterval = setInterval(() => this.next(), this.autoplayDelay);
+    },
+
+    stopAutoplay() {
+      if (this.autoplayInterval) {
+        clearInterval(this.autoplayInterval);
+        this.autoplayInterval = null;
+      }
+    }
+  };
+
+  // Inicializa cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => nqCarouselController.init());
+  } else {
+    nqCarouselController.init();
+  }
+
+  // Expone el controlador globalmente para onclick handlers
+  window.nqCarousel = nqCarouselController;
+}
